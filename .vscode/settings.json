@@ -1,0 +1,28 @@
+{
+    "cSpell.words": [
+        "bootcamps",
+        "Reimagined"
+    ],
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/proposal/proposal.tex"
+            ],
+            "config": {
+                "audience": "expert",
+                "dialect": "british",
+                "domain": "academic",
+                "emotions": [
+                    "neutral",
+                    "confident",
+                    "analytical"
+                ],
+                "goals": [
+                    "inform",
+                    "describe",
+                    "convince"
+                ]
+            }
+        }
+    ]
+}

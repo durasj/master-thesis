@@ -1,0 +1,74 @@
+% Defaults try to follow "A Guide for Graduate Research Students" from Dr. Dermot Burns, NUI Galway, 2017
+% Specifically Chapter 2.5.1 Research Master's thesis layout
+% https://web.archive.org/web/20210715043246/http://www.nuigalway.ie/media/graduatestudies/files/writingascientificstylethesis/writing_a_scientific_thesis.pdf
+
+\usepackage[utf8]{inputenc}
+\usepackage[british]{babel}
+\usepackage{csquotes}
+\usepackage{lmodern}
+\usepackage[a-2u]{pdfx}
+
+\usepackage{amsthm}             % theorems, definitions, etc.
+\usepackage{bbding}             % various symbols (squares, asterisks, scissors, ...)
+\usepackage{bm}                 % boldface symbols (\bm)
+\usepackage{graphicx}           % embedding of pictures
+\usepackage{fancyvrb}           % improved verbatim environment
+\usepackage[nottoc]{tocbibind}  % makes sure that bibliography and the lists
+                                % of figures/tables are included in the table
+                                % of contents
+\usepackage{dcolumn}            % improved alignment of table columns
+\usepackage{booktabs}           % improved horizontal lines in tables
+\usepackage{paralist}           % improved enumerate and itemize
+\usepackage{datetime}           % date time utilities
+\usepackage{indentfirst}        % indent first paragraph of section
+\usepackage{algpseudocode}      % fancy pseudo code
+\usepackage{fancyhdr}           % fancy header/footer
+\usepackage{setspace}           % line spacing
+\usepackage{hyphenat}           % hyphenation control
+\usepackage{titlesec}           % custom chapter/section/subsection title style
+\usepackage{hyperref}           % links
+
+% Suggestion for hyphenation can be done like com~=mu~=ni~=ty
+\useshorthands{~}
+\defineshorthand{~-}{\hyp{}}
+
+% Month Year date format
+\newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
+
+% Removal of drawn-out Chapter N titles
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\LARGE}
+
+% Sensible hyperlinks
+\hypersetup{unicode}
+\hypersetup{breaklinks=true}
+
+% Assets directory
+\graphicspath{ {./assets/} }
+
+% Bibliography setup to match Limerick's Cite it Right
+\usepackage[style=authoryear,dashed=false,giveninits=true,uniquename=init,maxbibnames=100,maxcitenames=2,urldate=long]{biblatex}
+\addbibresource{bibliography.bib}
+\renewcommand{\labelnamepunct}{\addspace}
+\DefineBibliographyStrings{english}{%
+    andothers = {\em et\addabbrvspace al\adddot}, % Italics for et al
+    available = {available},
+    urlseen   = {accessed},
+}
+\DeclareNameAlias{sortname}{family-given} % All authors in the same order
+\DeclareFieldFormat{url}{\bibstring{available}\space\url{#1}}
+\DeclareFieldFormat{urldate}{[\bibstring{urlseen}\space#1]}
+\NewBibliographyString{available}
+\DefineBibliographyStrings{british}{available={available}}
+\newcommand{\parenciteyear}[2][]{\citeauthor{#2} (\citeyear[#1]{#2})}
+
+% Headers and footers
+\fancyhf{}
+\lhead{\nouppercase{\leftmark}}
+\rhead{\nouppercase{\rightmark}}
+\cfoot{\thepage}
+\setlength\headheight{15pt}
+
+% Spacing between paragraphs and lines
+\setlength{\parskip}{0.25em}
+\onehalfspacing
