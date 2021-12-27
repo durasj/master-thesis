@@ -1,3 +1,51 @@
 \chapter{Design and Implementation}
 
-Lorem.
+\todo[inline]{Contains only brief notes in the form of free-flowing text.}
+
+Outlines considerations when migrating desktop education tool to accessible and usable, extendable, secure, and reproducible web application.
+Considers the mentioned hurdles with MOOC development.
+
+\section{Accessibility and Usability}
+
+Designed to be usable with built-in accessibility tools shown to be used by primary and secondary beneficiaries.
+Main points: semantics, ARIA.
+
+Time to first interaction.
+Minimal build size - Svelte via SvelteKit and Tailwind with three shaking and chunking.
+Used bandwith and required internet connection.
+Compare size and time to download the Nand2Tetris desktop (with and without JRE) app and the highly-optimised web app.
+Contrary to expectations - web app does not have to be downloaded again - can be used offline as PWA.
+
+Usable from all platforms - percentage?
+Compared to desktop Java - with and without preinstalled JRE.
+
+Progressive enhancement.
+IDE - Monaco for accessibility and powerful capabilities.
+Simplified contenteditable with the same syntax highlighting for mobile phones.
+
+\section{Extensibility}
+
+Everything (including learning materials) control versioned on Github.
+Learning materials processed from Markdown files using MDsveX.
+
+\section{Acceleration of Development}
+
+Use of available third party libraries to accelerate development.
+
+Nearley with Moo for simple parsers.
+
+Use of freely available scalable services - Github, Cloudflare - CDN, CI/CD, key/value.
+
+\section{Security}
+
+Infrastructure and deployment: DNSSEC, HTTPS, automation - CI/CD with signed commits - open source considerations!, "Denial of Wallet".
+
+User: Passwordless login, Google Auth
+
+Parsers and interpreters: No eval or access to arbitrary JS APIs in interpreter.
+
+\section{Reproducibility}
+
+Again - everything is versioned - infrastructure, documentation, content, code.
+Made for easy hosting by anybody even without the backend.
+Backend optional - can be swapped for other provider.

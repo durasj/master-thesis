@@ -4,36 +4,40 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[british]{babel}
-\usepackage{csquotes}
 \usepackage{lmodern}
 \usepackage[a-2u]{pdfx}
 
-\usepackage{amsthm}             % theorems, definitions, etc.
-\usepackage{bbding}             % various symbols (squares, asterisks, scissors, ...)
-\usepackage{bm}                 % boldface symbols (\bm)
-\usepackage{graphicx}           % embedding of pictures
-\usepackage{fancyvrb}           % improved verbatim environment
-\usepackage[nottoc]{tocbibind}  % makes sure that bibliography and the lists
-                                % of figures/tables are included in the table
-                                % of contents
-\usepackage{dcolumn}            % improved alignment of table columns
-\usepackage{booktabs}           % improved horizontal lines in tables
-\usepackage{paralist}           % improved enumerate and itemize
-\usepackage{datetime}           % date time utilities
-\usepackage{indentfirst}        % indent first paragraph of section
-\usepackage{algpseudocode}      % fancy pseudo code
-\usepackage{fancyhdr}           % fancy header/footer
-\usepackage{setspace}           % line spacing
-\usepackage{hyphenat}           % hyphenation control
-\usepackage{titlesec}           % custom chapter/section/subsection title style
-\usepackage{hyperref}           % links
+\usepackage{amsthm}                           % theorems, definitions, etc.
+\usepackage{bbding}                           % various symbols (squares, asterisks, scissors, ...)
+\usepackage{bm}                               % boldface symbols (\bm)
+\usepackage[style=american]{csquotes}         % easier quotes
+\usepackage{graphicx}                         % embedding of pictures
+\usepackage{fancyvrb}                         % improved verbatim environment
+\usepackage[nottoc]{tocbibind}                % makes sure that bibliography and the lists
+                                              % of figures/tables are included in the table
+                                              % of contents
+\usepackage{dcolumn}                          % improved alignment of table columns
+\usepackage{booktabs}                         % improved horizontal lines in tables
+\usepackage{paralist}                         % improved enumerate and itemize
+\usepackage[en-GB]{datetime2}                 % date time utilities
+\usepackage{indentfirst}                      % indent first paragraph of section
+\usepackage{algpseudocode}                    % fancy pseudo code
+\usepackage{fancyhdr}                         % fancy header/footer
+\usepackage{setspace}                         % line spacing
+\usepackage{hyphenat}                         % hyphenation control
+\usepackage{titlesec}                         % custom chapter/section/subsection title style
+\usepackage{hyperref}                         % links
+\usepackage[acronym,toc]{glossaries}          % glossary/acronyms
+\usepackage{todonotes}                        % Notes/TODOs that should get resolved
+\usepackage[author={Jakub Duras}]{pdfcomment} % Comments
+
+\setacronymstyle{long-short}
+
+\MakeOuterQuote{"}
 
 % Suggestion for hyphenation can be done like com~=mu~=ni~=ty
 \useshorthands{~}
 \defineshorthand{~-}{\hyp{}}
-
-% Month Year date format
-\newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
 
 % Removal of drawn-out Chapter N titles
 \titleformat{\chapter}[display]
@@ -60,7 +64,8 @@
 \DeclareFieldFormat{urldate}{[\bibstring{urlseen}\space#1]}
 \NewBibliographyString{available}
 \DefineBibliographyStrings{british}{available={available}}
-\newcommand{\parenciteyear}[2][]{\citeauthor{#2} (\citeyear[#1]{#2})}
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryBibitem{\clearfield{day}}
 
 % Headers and footers
 \fancyhf{}

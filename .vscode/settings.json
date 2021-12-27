@@ -1,7 +1,8 @@
 {
-    "cSpell.words": [
-        "bootcamps",
-        "Reimagined"
+    "cSpell.language": "en-GB",
+    "cSpell.ignorePaths": [
+        "node_modules",
+        "**/*.tex"
     ],
     "grammarly.overrides": [
         {
@@ -23,6 +24,50 @@
                     "convince"
                 ]
             }
+        },
+        {
+            "files": [
+                "**/00-frontmatter.tex"
+            ],
+            "config": {
+                "audience": "expert",
+                "dialect": "british",
+                "domain": "academic",
+                "emotions": [
+                    "neutral",
+                    "confident",
+                    "respectful",
+                    "analytical"
+                ],
+                "goals": [
+                    "inform",
+                    "describe"
+                ]
+            }
+        },
+        {
+            "files": [
+                "**/20-background.tex"
+            ],
+            "config": {
+                "audience": "expert",
+                "dialect": "british",
+                "domain": "academic",
+                "emotions": [
+                    "neutral",
+                    "confident",
+                    "respectful",
+                    "analytical"
+                ],
+                "goals": [
+                    "inform",
+                    "describe"
+                ]
+            }
         }
-    ]
+    ],
+    "grammarly.audience": "expert",
+    "grammarly.dialect": "british",
+    "grammarly.domain": "academic",
+    "grammarly.showExamples": true
 }
