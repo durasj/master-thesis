@@ -6,7 +6,7 @@ import { NavBar } from '@/components/NavBar'
 import { Pricing } from '@/components/Pricing'
 import { Resources } from '@/components/Resources'
 import { Screencasts } from '@/components/Screencasts'
-import { TableOfContents } from '@/components/TableOfContents'
+import { Participants } from '@/components/Participants'
 import { Testimonials } from '@/components/Testimonials'
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Hero />
       <NavBar />
-      <TableOfContents />
+      <Participants />
 
       <Screencasts />
 
