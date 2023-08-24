@@ -23,6 +23,7 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <Author />
+
       <Footer />
     </>
   )
