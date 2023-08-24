@@ -30,6 +30,7 @@
 \usepackage[acronym,toc]{glossaries}          % glossary/acronyms
 \usepackage{todonotes}                        % Notes/TODOs that should get resolved
 \usepackage[author={Jakub Duras}]{pdfcomment} % Comments
+\usepackage{pdfpages}                         % Include other PDF
 
 \setacronymstyle{long-short}
 
@@ -40,8 +41,8 @@
 \defineshorthand{~-}{\hyp{}}
 
 % Removal of drawn-out Chapter N titles
-\titleformat{\chapter}[display]
-  {\normalfont\bfseries}{}{0pt}{\LARGE}
+\titleformat{\chapter}[hang]
+{\normalfont\LARGE\bfseries}{\thechapter}{1em}{\LARGE}
 
 % Sensible hyperlinks
 \hypersetup{unicode}
@@ -50,8 +51,20 @@
 % Assets directory
 \graphicspath{ {./assets/} }
 
+% Control over floating of figure
+\usepackage{float}
+% Do not allow floating of figures to the next (sub)section
+\usepackage[section]{placeins}
+\makeatletter
+\AtBeginDocument{%
+  \expandafter\renewcommand\expandafter\subsection\expandafter{%
+    \expandafter\@fb@secFB\subsection
+  }%
+}
+\makeatother
+
 % Bibliography setup to match Limerick's Cite it Right
-\usepackage[style=authoryear,dashed=false,giveninits=true,uniquename=init,maxbibnames=100,maxcitenames=2,urldate=long]{biblatex}
+\usepackage[style=authoryear,sorting=nyt,dashed=false,giveninits=true,uniquename=init,maxbibnames=100,maxcitenames=2,urldate=long]{biblatex}
 \addbibresource{bibliography.bib}
 \renewcommand{\labelnamepunct}{\addspace}
 \DefineBibliographyStrings{english}{%

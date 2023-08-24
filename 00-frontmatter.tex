@@ -1,28 +1,40 @@
+\includepdf{./assets/CertificationOfAuthorship.pdf}
+
 % Parts before the first chapter should have roman literals
 \pagenumbering{roman}
 \setcounter{page}{1}
 
-\chapter*{Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
-
-\todo[inline]{To be done.}
-
 \chapter*{Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
 
-\todo[inline]{To be done.}
+\todo[inline]{WIP}
 
-I would like to thank Dr Lorem and Ms Ipsum.
+First of all, I would like to thank my advisor Dr Frank Glavin and university staff who patiently answered my questions and provided me with helpful feedback.
+Secondly, I would like to thank my brother Jan Duras for the help with the graphic design and adaptation of Nand2Tetris learning material.
+Moreover, I would like to thank everybody who generously offered their time to participate in the comparative study.
+Last but not least, I would like to thank my family, friends, and collegues, who encouraged me and gave me the time and space needed to focus on this thesis.
+
+\glsunsetall % Glossary terms should be used in short form in lists
 
 \tableofcontents
 
+\listoftables
+
 \listoffigures
 
-\listoftables
+\glsresetall % Glossary terms used in lists should have no influence on the rest
 
 \printglossary[type=\acronymtype, style=long, nonumberlist, title=List of Acronyms]
 
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\todo[inline]{To be done once everything else is finished. Max 300 words!}
+
+\todo[color=blue!20, inline]{Possible line of thought: High-level concepts have received more attention on the web - online IDEs. Introduction to low-level principles not as much. Example - the most popular course on this topic on Coursera - nand2tetris - desktop tools. Shift in the devices to mobile and chromebooks. Universal design - higher market share of mobile devices - especially in emerging markets. Built-in accessibility with web tools, can be embedded into learning material. Outlines the process and considerations needed to migrate desktop educational tool to web. Mentions advantages of switching to web (percentage of covered devices, improved UX metrics - primary research).}
+
 \cleardoublepage
 
+% The rest has normal arabic numbering
 \pagenumbering{arabic}
 \setcounter{page}{1}

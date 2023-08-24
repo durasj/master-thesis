@@ -1,6 +1,6 @@
 # Master's Thesis
 
-
+LaTeX document and associated website with charts in one repository.
 
 ## Credit
 

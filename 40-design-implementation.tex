@@ -1,51 +1,68 @@
 \chapter{Design and Implementation}
 
-\todo[inline]{Contains only brief notes in the form of free-flowing text.}
+\todo[inline]{Contains only brief notes.}
 
-Outlines considerations when migrating desktop education tool to accessible and usable, extendable, secure, and reproducible web application.
-Considers the mentioned hurdles with MOOC development.
+\todo[inline]{Outline considerations when migrating desktop education tool to accessible, usable, extendable, secure, and reproducible web application.}
+
+\todo[inline]{Consider mentioned hurdles with MOOC development.}
 
 \section{Accessibility and Usability}
 
-Designed to be usable with built-in accessibility tools shown to be used by primary and secondary beneficiaries.
-Main points: semantics, ARIA.
+\todo[inline]{Designed to be usable with built-in accessibility tools shown to be used by primary and secondary beneficiaries.}
 
-Time to first interaction.
-Minimal build size - Svelte via SvelteKit and Tailwind with three shaking and chunking.
-Used bandwith and required internet connection.
-Compare size and time to download the Nand2Tetris desktop (with and without JRE) app and the highly-optimised web app.
-Contrary to expectations - web app does not have to be downloaded again - can be used offline as PWA.
+\todo[inline]{Main points: semantics, ARIA. Figures are SVGs with system-stack fonts and not curves.}
 
-Usable from all platforms - percentage?
-Compared to desktop Java - with and without preinstalled JRE.
+\todo[inline]{Include https://www.w3.org/WAI/about/accessibility-statement/ and https://www.w3.org/WAI/meta/customize/.}
 
-Progressive enhancement.
-IDE - Monaco for accessibility and powerful capabilities.
-Simplified contenteditable with the same syntax highlighting for mobile phones.
+Performance/size related:
+
+\todo[inline]{Bandwith/internet connection (Accessibility benefits backreference)}.
+
+\todo[inline]{Time to first interaction.}
+
+\todo[inline]{Minimal build size - Svelte via SvelteKit and Tailwind with three shaking, chunking, server side rendering (static build).}
+
+\todo[inline]{Used bandwith and required internet connection.}
+
+\todo[inline]{Compare size and time to download the Nand2Tetris desktop (with and without JRE) app and the highly-optimised web app.}
+
+\todo[inline]{Contrary to expectations - web app does not have to be downloaded again - can be used offline as PWA.}
+
+\todo[inline]{So faster to load than both nand2tetris and wepsim and is loaded only once/works offline like nand2teris and unlike wepsim.}
+
+Client device supported:
+
+\todo[inline]{Usable from all platforms - percentage? Compare to Nand2Tetris.}
+
+\todo[inline]{Progressive enhancement.}
+
+\todo[inline]{IDE - Monaco for accessibility and powerful capabilities. Link back to Literature Review - Monaco at the hearth of the most popular VSCode.}
 
 \section{Extensibility}
 
-Everything (including learning materials) control versioned on Github.
-Learning materials processed from Markdown files using MDsveX.
+\todo[inline]{Everything (including learning materials) control versioned on Github.}
+\todo[inline]{Learning materials processed from Markdown files using Markdoc.}
 
 \section{Acceleration of Development}
 
-Use of available third party libraries to accelerate development.
+\todo[inline]{Use of available third party libraries to accelerate development.}
 
-Nearley with Moo for simple parsers.
+\todo[inline]{Nearley with Moo for simple and powerful parser. Still performant - regex, linear complexity right recursion.}
 
-Use of freely available scalable services - Github, Cloudflare - CDN, CI/CD, key/value.
+\todo[inline]{Use of freely available scalable services - Github, Cloudflare - CDN, CI/CD, key/value.}
 
 \section{Security}
 
-Infrastructure and deployment: DNSSEC, HTTPS, automation - CI/CD with signed commits - open source considerations!, "Denial of Wallet".
+\todo[inline]{Infrastructure and deployment: DNSSEC, HTTPS, automation - CI/CD with signed commits - open source considerations!, "Denial of Wallet".}
 
-User: Passwordless login, Google Auth
+\todo[inline]{Anonymous sessions via secure-only http-only cookies.}
 
-Parsers and interpreters: No eval or access to arbitrary JS APIs in interpreter.
+\todo[inline]{Parsers and interpreters: No eval or access to arbitrary JS APIs in interpreter.}
 
 \section{Reproducibility}
 
-Again - everything is versioned - infrastructure, documentation, content, code.
-Made for easy hosting by anybody even without the backend.
-Backend optional - can be swapped for other provider.
+\todo[inline]{Again - everything is versioned - infrastructure, documentation, content, code.}
+
+\todo[inline]{Made for easy hosting by anybody even without the backend.}
+
+\todo[inline]{Backend optional - can be swapped for other provider.}

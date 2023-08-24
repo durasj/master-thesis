@@ -1,11 +1,87 @@
 \chapter{Evaluation}
 
-\todo[inline]{To be done.}
+\todo[inline]{Outline of the covered topics will be added when finishing the chapter.}
 
-\section{Automated evaluation}
+\section{Accessibility Evaluation}
+\label{Evaluation-Accessibility}
 
-Accessibility evaluation tools. Automated tests.
+\todo[inline]{Automated and manual test results - wcag template report.}
 
-\section{Comparative User Experience Study}
+\section{Functional Testing}
+\label{Evaluation-Tests}
 
-UX KPI comparison results.
+\todo[inline]{Unit tests - brief description of lcov results and exceptions. Example unit tests.}
+
+\todo[inline]{List of UI tests based on use cases and showcase of some selected ones. Description of exceptions.}
+
+\section{Comparative Usability Study}
+\label{Evaluation-UX}
+
+The total number of participants who joined the scheduled comparative study session was $n=26$.
+Out of that, the data of two participants had to be removed - Participant $F$, who experienced technical difficulties unrelated to the software and Participant $J$, who mentioned they tried the Proposed Software in the past.
+The resulting sample size that was analysed was $n=24$, with an equal distribution of $n_1=12$ and $n_2=12$ among both groups.
+
+The list of participants and their profiles within Group A can be seen in Table~\ref{table:evaluation-profile-a}, while Group B participant profiles can be seen in Table~\ref{table:evaluation-profile-b}.
+
+\begin{table}[!h]
+    \centering
+    \caption{Group A participant profiles.}
+    \label{table:evaluation-profile-a}
+    \begin{tabular}{ l l l l l l l l }
+        \makebox[2em][l]{\rotatebox{30}{\textbf{Person}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Prior Exp.}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Education}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Job}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Age Group}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Paid}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Intr. Motiv.}}} & \rotatebox{30}{\textbf{Platform}} \\ \hline
+        \textbf{M} & 1 & 2 & 2 & 30-49 & 0 & 0 & Ubuntu Linux desktop \\ \hline
+        \textbf{LU} & 0 & 0 & 0 & 18-29 & 1 & 1 & Windows 10 laptop \\ \hline
+        \textbf{Y} & 1 & 0 & 0 & 30-49 & 0 & 2 & Windows 10 laptop \\ \hline
+        \textbf{MI} & 0 & 1 & 0 & 30-49 & 0 & 0 & Ubuntu Linux laptop \\ \hline
+        \textbf{MX} & 1 & 2 & 1 & 30-49 & 0 & 1 & Windows 10 desktop \\ \hline
+        \textbf{R} & 0 & 2 & 0 & 18-29 & 1 & 0 & Windows 10 desktop \\ \hline
+        \textbf{MK} & 0 & 1 & 2 & 30-49 & 0 & 1 & Windows 11 laptop \\ \hline
+        \textbf{L} & 0 & 2 & 2 & 18-29 & 0 & 1 & macOS 13 arm64 laptop \\ \hline
+        \textbf{MA} & 0 & 0 & 0 & 18-29 & 1 & 1 & Windows 10 laptop \\ \hline
+        \textbf{KY} & 0 & 1 & 1 & 18-29 & 1 & 1 & Windows 10 laptop \\ \hline
+        \textbf{KA} & 0 & 0 & 0 & 18-29 & 1 & 0 & Windows 7 laptop \\ \hline
+        \textbf{E} & 0 & 0 & 2 & 30-49 & 1 & 2 & Windows 10 desktop \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+    \centering
+    \caption{Group B participant profiles.}
+    \label{table:evaluation-profile-b}
+    \begin{tabular}{ l l l l l l l l }
+        \makebox[2em][l]{\rotatebox{30}{\textbf{Person}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Prior Exp.}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Education}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Job}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Age Group}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Paid}}} & \makebox[2em][l]{\rotatebox{30}{\textbf{Intr. Motiv.}}} & \rotatebox{30}{\textbf{Platform}} \\ \hline
+        \textbf{P} & 0 & 1 & 1 & 18-29 & 0 & 2 & Windows 10 laptop \\ \hline
+        \textbf{S} & 0 & 1 & 0 & 30-49 & 0 & 1 & Windows 10 desktop \\ \hline
+        \textbf{MM} & 1 & 1 & 2 & 18-29 & 0 & 1 & Ubuntu Linux laptop \\ \hline
+        \textbf{SA} & 0 & 1 & 2 & 18-29 & 0 & 0 & Windows 11 laptop \\ \hline
+        \textbf{JO} & 0 & 0 & 0 & 18-29 & 1 & 0 & Windows 11 desktop \\ \hline
+        \textbf{PE} & 0 & 1 & 0 & 18-29 & 1 & 1 & Windows 11 laptop \\ \hline
+        \textbf{MS} & 0 & 2 & 2 & 18-29 & 0 & 1 & Windows 11 laptop \\ \hline
+        \textbf{B} & 1 & 2 & 2 & 18-29 & 0 & 1 & macOS 13 arm64 laptop \\ \hline
+        \textbf{V} & 0 & 2 & 2 & 18-29 & 1 & 1 & Windows 10 laptop \\ \hline
+        \textbf{MH} & 1 & 2 & 2 & 30-49 & 1 & 1 & macOS 13 x86 laptop \\ \hline
+        \textbf{LB} & 0 & 2 & 2 & 18-29 & 1 & 1 & Windows 10 laptop \\ \hline
+        \textbf{MT} & 0 & 2 & 0 & 18-29 & 1 & 2 & Windows 10 desktop \\ \hline
+    \end{tabular}
+\end{table}
+
+As we can see, the 
+
+
+\todo[inline]{Bar chart showing skew in participant profile between groups.}
+
+\todo[inline]{Results (success, times, SUS score) for each participant and means as tables for each group.}
+
+\todo[inline]{Appendices with results - questionnaires and raw data - Google spreadsheet printed as PDF.}
+
+\todo[inline]{RESULTS on all observed metrics, incl. statistical significance.}
+
+\todo[inline]{Put resulting scores from SUS on \textcite{sauro_practical_2011} percentile rank and give adjectives and grade from \textcite{bangor_determining_2009}.}
+
+\todo[inline]{Scatter plot task time vs SUS group-wise color coding.}
+
+\todo[inline]{Stacked chart with task times.}
+
+\todo[inline]{Linear chart with task times.}
+
+\todo[inline]{Correlation between profiles and performance.}
