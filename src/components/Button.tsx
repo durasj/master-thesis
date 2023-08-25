@@ -49,6 +49,7 @@ export function Button<
 
   className = clsx(
     baseStyles[variant],
+    // @ts-ignore
     variantStyles[variant][color],
     className,
   )

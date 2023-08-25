@@ -56,7 +56,7 @@ export function About() {
             </p>
 
             <p className="mt-4 text-lg tracking-tight text-zinc-700">
-              This webpage captures just a small part of the full research done as a master's thesis.
+              This webpage captures just a small part of the full research done as a master&apos;s thesis.
               For context and more information, feel free to check the full thesis document or take a peek at the code.
             </p>
 
