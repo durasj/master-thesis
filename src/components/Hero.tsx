@@ -20,18 +20,33 @@ export function Hero() {
               Research Behind {'\u00A0'} Chips and Code
             </h1>
             <p className="mt-4 text-3xl text-zinc-600">
-              Comparative study results showing usability improvements moving the existing desktop learning tool to the web.
+              Comparative study results showing usability improvements moving
+              the existing desktop learning tool to the web.
             </p>
             <div className="mt-8 flex gap-4">
-              <Button href="https://chipsandcode.com" color="indigo">
+              <Button
+                href="https://chipsandcode.com"
+                target="_blank"
+                color="indigo"
+              >
                 Chips and Code
               </Button>
 
-              <Button href="https://github.com/durasj/chipsandcode" variant="outline" color="zinc">
+              <Button
+                href="https://github.com/durasj/chipsandcode"
+                target="_blank"
+                variant="outline"
+                color="zinc"
+              >
                 Code Repository
               </Button>
 
-              <Button href="/main.pdf" variant="outline" color="zinc">
+              <Button
+                href="/main.pdf"
+                target="_blank"
+                variant="outline"
+                color="zinc"
+              >
                 Thesis
               </Button>
             </div>

@@ -30,7 +30,7 @@ const trace2 = {
 const data = [trace1, trace2]
 
 const layout = {
-  title: 'Number of times participants were confused',
+  title: 'Number of times participants got confused',
   modebar: { orientation: 'v' },
   yaxis: {
     title: 'Count',

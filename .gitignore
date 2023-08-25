@@ -305,3 +305,4 @@ yarn-error.log*
 .env*.local
 *.tsbuildinfo
 next-env.d.ts
+src/public/*.pdf

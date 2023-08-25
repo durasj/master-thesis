@@ -12,7 +12,7 @@ const sections = [
   },
   { id: 'efficiency', title: 'Efficiency' },
   { id: 'sus', title: 'Questionnaire' },
-  { id: 'skew', title: 'Data Skew' },
+  { id: 'bias', title: 'Assignment Bias' },
   { id: 'about', title: 'About' },
 ]
 
@@ -160,9 +160,8 @@ export function NavBar() {
         >
           {sections.map((section, sectionIndex) => (
             <li key={section.id} className="flex [counter-increment:section]">
-              <Link
+              <a
                 href={`#${section.id}`}
-                scroll={false}
                 className={clsx(
                   'flex w-full flex-col items-center justify-center border-b-2 before:mb-2 before:font-mono before:text-sm before:content-[counter(section,decimal-leading-zero)]',
                   sectionIndex === activeIndex
@@ -171,7 +170,7 @@ export function NavBar() {
                 )}
               >
                 {section.title}
-              </Link>
+              </a>
             </li>
           ))}
         </ol>

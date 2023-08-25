@@ -12,7 +12,7 @@ const xValue = [
 ]
 
 const yValue = [3, 11, 10, 6, 10]
-const yValue2 = [3, 17, 15, 6, 12]
+const yValue2 = [3, 19, 15, 6, 12]
 
 const trace1 = {
   name: 'Group A',

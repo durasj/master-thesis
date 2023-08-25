@@ -1,6 +1,8 @@
 'use client'
 
 import { Layout, ScatterData } from 'plotly.js'
+import { linearRegression, linearRegressionLine } from 'simple-statistics';
+
 import { Plot } from './Plot'
 
 const trace1 = {
@@ -27,7 +29,38 @@ const trace2 = {
   type: 'scatter',
 } satisfies Partial<ScatterData>
 
-const data = [trace1, trace2]
+const regressionA = linearRegressionLine(
+  linearRegression(trace1.x.map((x, i) => [x, trace1.y[i]]))
+);
+const regressionB = linearRegressionLine(
+  linearRegression(trace2.x.map((x, i) => [x, trace2.y[i]]))
+);
+
+const trendLineA = {
+  x: [Math.min(...trace1.x), Math.max(...trace1.x)],
+  y: [regressionA(Math.min(...trace1.x)), regressionA(Math.max(...trace1.x))],
+  name: 'Group A Trend',
+  marker: {
+    color: '#3730a3',
+  },
+  mode: 'lines',
+  hoverinfo: 'skip',
+  type: 'scatter',
+} satisfies Partial<ScatterData>
+
+const trendLineB = {
+  x: [Math.min(...trace2.x), Math.max(...trace2.x)],
+  y: [regressionB(Math.min(...trace2.x)), regressionB(Math.max(...trace2.x))],
+  name: 'Group B Trend',
+  marker: {
+    color: '#71717a',
+  },
+  mode: 'lines',
+  hoverinfo: 'skip',
+  type: 'scatter',
+} satisfies Partial<ScatterData>
+
+const data = [trace1, trace2, trendLineA, trendLineB]
 
 const layout = {
   title: 'Relation between total time and SUS score',
