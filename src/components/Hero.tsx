@@ -17,14 +17,14 @@ export function Hero() {
         <div className="bg-white pt-16 lg:col-span-11 lg:bg-transparent lg:pt-0">
           <div className="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
             <h1 className="font-display text-5xl font-extrabold text-zinc-900 sm:text-6xl">
-              Resources for Thesis Chips and Code
+              Research Behind {'\u00A0'} Chips and Code
             </h1>
             <p className="mt-4 text-3xl text-zinc-600">
-              On the usability gains achieved by moving an old desktop learning tool to the web.
+              Comparative study results showing usability improvements moving the existing desktop learning tool to the web.
             </p>
             <div className="mt-8 flex gap-4">
               <Button href="https://chipsandcode.com" color="indigo">
-                Open Chips and Code
+                Chips and Code
               </Button>
 
               <Button href="https://github.com/durasj/chipsandcode" variant="outline" color="zinc">
