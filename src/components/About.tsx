@@ -66,8 +66,8 @@ export function About() {
                 target="_blank"
                 className="inline-flex items-center text-base font-medium tracking-tight text-indigo-600"
               >
-                <PdfIcon className="h-10 w-10 fill-current" />
-                <span className="ml-4">Open Thesis</span>
+                <PdfIcon className="h-8 w-8 fill-current" />
+                <span className="ml-3">Open Thesis</span>
               </Link>
 
               <Link
@@ -75,8 +75,8 @@ export function About() {
                 target="_blank"
                 className="inline-flex items-center text-base font-medium tracking-tight text-indigo-600 ml-8"
               >
-                <GithubIcon className="h-10 w-10 fill-current" />
-                <span className="ml-4">Check source code on Github</span>
+                <GithubIcon className="h-8 w-8 fill-current" />
+                <span className="ml-3">Check code on Github</span>
               </Link>
             </p>
           </div>

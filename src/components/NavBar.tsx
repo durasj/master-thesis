@@ -131,10 +131,9 @@ export function NavBar() {
             <Popover.Panel className="absolute inset-x-0 top-0 bg-white/95 py-3.5 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur">
               {sections.map((section, sectionIndex) => (
                 <Popover.Button
-                  as={Link}
+                  as="a"
                   key={section.id}
                   href={`#${section.id}`}
-                  scroll={false}
                   className="flex items-center px-4 py-1.5"
                 >
                   <span

@@ -30,19 +30,19 @@ export function AssignmentBias() {
         </p>
       </Container>
       <Container size="lg">
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 h-96">
+        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:h-96 h-[60rem]">
           <EducationCorrelationPlot />
 
           <EducationScoreCorrelationPlot />
         </div>
 
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 h-96">
+        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:h-96 h-[60rem]">
           <OccupationCorrelationPlot />
 
           <OccupationScoreCorrelationPlot />
         </div>
 
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 h-96">
+        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:h-96 h-[60rem]">
           <AgeCorrelationPlot />
 
           <AgeScoreCorrelationPlot />

@@ -23,7 +23,7 @@ export function Hero() {
               Comparative study results showing usability improvements moving
               the existing desktop learning tool to the web.
             </p>
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 mb-16 flex gap-4">
               <Button
                 href="https://chipsandcode.com"
                 target="_blank"
@@ -38,7 +38,7 @@ export function Hero() {
                 variant="outline"
                 color="zinc"
               >
-                Code Repository
+                Repository
               </Button>
 
               <Button
