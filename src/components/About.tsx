@@ -50,7 +50,7 @@ export function About() {
               reimagined Nand2Tetris tools powered by the modern web.
             </p>
             <p className="mt-4 text-lg tracking-tight text-zinc-700">
-              Nand2Tetris is a very popular course that introduces a wide range of computer principles by building a virtual computer from the group up.
+              <a href="https://www.nand2tetris.org/" target="_blank">Nand2Tetris</a> is a very popular course that introduces a wide range of computer principles by building a virtual computer from the group up.
               However, it is accompanied by an older Java desktop application.
               Chips and Code aims to reimplement the same functionality using the modern web with improved user experience.
             </p>
