@@ -12,6 +12,7 @@
 \usepackage{bm}                               % boldface symbols (\bm)
 \usepackage[style=american]{csquotes}         % easier quotes
 \usepackage{graphicx}                         % embedding of pictures
+\usepackage{svg}                              % embedding of SVGs
 \usepackage{fancyvrb}                         % improved verbatim environment
 \usepackage[nottoc]{tocbibind}                % makes sure that bibliography and the lists
                                               % of figures/tables are included in the table
@@ -50,6 +51,10 @@
 
 % Assets directory
 \graphicspath{ {./assets/} }
+
+% SVG setup
+\svgpath{{/assets/}}
+\svgsetup{inkscapelatex=false}
 
 % Control over floating of figure
 \usepackage{float}
