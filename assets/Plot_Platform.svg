@@ -2,8 +2,8 @@
 <svg
    class="main-svg"
    width="620"
-   height="340"
-   viewBox="0 0 620 340"
+   height="300"
+   viewBox="0 0 620 300"
    version="1.1"
    id="svg93"
    sodipodi:docname="Plot_Platform.svg"
@@ -22,14 +22,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.89444444"
-     inkscape:cx="365.03106"
-     inkscape:cy="330.37267"
+     inkscape:cx="354.96895"
+     inkscape:cy="327.01864"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g93" />
+     inkscape:current-layer="svg93" />
   <defs
      id="defs-06e81e">
     <g
@@ -99,7 +99,7 @@
   <g
      class="cartesianlayer"
      id="g60"
-     transform="translate(-15.687112,-63.35986)">
+     transform="translate(-16.21118,-91.554736)">
     <g
        class="subplot xy"
        id="g59">
@@ -582,7 +582,8 @@
   </g>
   <g
      class="infolayer"
-     id="g93">
+     id="g93"
+     transform="translate(-0.52406833,-28.194876)">
     <g
        class="legend"
        pointer-events="all"

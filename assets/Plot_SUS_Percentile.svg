@@ -2,18 +2,18 @@
 <svg
    class="main-svg"
    width="620"
-   height="300"
-   viewBox="0 0 620 300"
+   height="340"
+   viewBox="0 0 620 340"
    version="1.1"
-   id="svg92"
-   sodipodi:docname="Plot_Age.svg"
+   id="svg104"
+   sodipodi:docname="Plot_SUS_Percentile.svg"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview92"
+     id="namedview104"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -22,21 +22,21 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.2649355"
-     inkscape:cx="255.74427"
-     inkscape:cy="157.71555"
+     inkscape:cx="405.15901"
+     inkscape:cy="158.50611"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg92" />
+     inkscape:current-layer="svg104" />
   <defs
-     id="defs-60da9f">
+     id="defs-bdf9b5">
     <g
        class="clips"
        id="g5">
       <clipPath
-         id="clip60da9fxyplot"
+         id="clipbdf9b5xyplot"
          class="plotclip">
         <rect
            width="447"
@@ -47,7 +47,7 @@
       </clipPath>
       <clipPath
          class="axesclip"
-         id="clip60da9fx">
+         id="clipbdf9b5x">
         <rect
            x="80"
            y="0"
@@ -57,7 +57,7 @@
       </clipPath>
       <clipPath
          class="axesclip"
-         id="clip60da9fy">
+         id="clipbdf9b5y">
         <rect
            x="0"
            y="100"
@@ -67,7 +67,7 @@
       </clipPath>
       <clipPath
          class="axesclip"
-         id="clip60da9fxy">
+         id="clipbdf9b5xy">
         <rect
            x="80"
            y="100"
@@ -98,11 +98,11 @@
   </g>
   <g
      class="cartesianlayer"
-     id="g59"
-     transform="translate(-16.790012,-93.168043)">
+     id="g71"
+     transform="translate(-16.324728,-93.716518)">
     <g
        class="subplot xy"
-       id="g58">
+       id="g70">
       <g
          class="layer-subplot"
          id="g14">
@@ -125,406 +125,421 @@
       </g>
       <g
          class="gridlayer"
-         id="g23">
+         id="g26">
         <g
            class="x"
-           id="g18" />
-        <g
-           class="y"
-           id="g22">
+           id="g20">
           <path
-             class="ygrid crisp"
-             transform="translate(0,318.7)"
-             d="M 80,0 H 527"
+             class="xgrid crisp"
+             transform="translate(169.4)"
+             d="M 0,100 V 370"
+             style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
+             id="path17" />
+          <path
+             class="xgrid crisp"
+             transform="translate(258.8)"
+             d="M 0,100 V 370"
              style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
              id="path18" />
           <path
-             class="ygrid crisp"
-             transform="translate(0,267.4)"
-             d="M 80,0 H 527"
+             class="xgrid crisp"
+             transform="translate(348.2)"
+             d="M 0,100 V 370"
              style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
              id="path19" />
           <path
-             class="ygrid crisp"
-             transform="translate(0,216.1)"
-             d="M 80,0 H 527"
+             class="xgrid crisp"
+             transform="translate(437.6)"
+             d="M 0,100 V 370"
              style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
              id="path20" />
+        </g>
+        <g
+           class="y"
+           id="g25">
           <path
              class="ygrid crisp"
-             transform="translate(0,164.8)"
+             transform="translate(0,308.31)"
              d="M 80,0 H 527"
              style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
              id="path21" />
           <path
              class="ygrid crisp"
-             transform="translate(0,113.5)"
+             transform="translate(0,259.74)"
              d="M 80,0 H 527"
              style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
              id="path22" />
+          <path
+             class="ygrid crisp"
+             transform="translate(0,211.16)"
+             d="M 80,0 H 527"
+             style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
+             id="path23" />
+          <path
+             class="ygrid crisp"
+             transform="translate(0,162.58)"
+             d="M 80,0 H 527"
+             style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
+             id="path24" />
+          <path
+             class="ygrid crisp"
+             transform="translate(0,114)"
+             d="M 80,0 H 527"
+             style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
+             id="path25" />
         </g>
       </g>
       <g
          class="zerolinelayer"
-         id="g24">
+         id="g27">
+        <path
+           class="xzl zl crisp"
+           transform="translate(80)"
+           d="M 0,100 V 370"
+           style="stroke:#444444;stroke-width:1px;stroke-opacity:1"
+           id="path26" />
         <path
            class="yzl zl crisp"
-           transform="translate(0,370)"
+           transform="translate(0,356.89)"
            d="M 80,0 H 527"
            style="stroke:#444444;stroke-width:1px;stroke-opacity:1"
-           id="path23" />
+           id="path27" />
       </g>
       <path
          class="xlines-below"
-         id="path24"
+         id="path28"
          d="" />
       <path
          class="ylines-below"
-         id="path25"
+         id="path29"
          d="" />
       <g
          class="overlines-below"
-         id="g25" />
+         id="g29" />
       <g
          class="xaxislayer-below"
-         id="g26" />
+         id="g30" />
       <g
          class="yaxislayer-below"
-         id="g27" />
+         id="g31" />
       <g
          class="overaxes-below"
-         id="g28" />
+         id="g32" />
       <g
          class="plot"
          transform="translate(80,100)"
-         clip-path="url(#clip60da9fxyplot)"
-         id="g42">
+         clip-path="url(#clipbdf9b5xyplot)"
+         id="g52">
         <g
-           class="barlayer mlayer"
-           id="g41">
+           class="scatterlayer mlayer"
+           id="g51">
           <g
-             class="trace bars"
-             style="opacity:1"
-             id="g34">
+             class="trace scatter trace72e562"
+             style="opacity:1;stroke-miterlimit:2"
+             id="g38">
+            <g
+               class="fills"
+               id="g33" />
+            <g
+               class="errorbars"
+               id="g34" />
+            <g
+               class="lines"
+               id="g35">
+              <path
+                 class="js-line"
+                 d="m 0,256.5 67.73,-1.47 4.51,-0.19 40.64,-2.63 4.51,-0.43 27.09,-3.33 4.52,-0.71 22.58,-4.35 4.51,-1.06 18.06,-5.04 4.52,-1.48 18.06,-7.14 4.51,-2.13 13.55,-7.53 4.51,-2.94 13.55,-10.44 4.51,-4.09 9.03,-9.24 4.52,-5.17 13.54,-17.9 4.52,-6.75 13.55,-22.35 4.51,-8.03 36.12,-65.39 4.52,-7.13 9.03,-12.76 4.51,-5.54 9.03,-9.25 4.52,-3.71 9.03,-5.66 4.51,-2.02 9.03,-2.73 4.52,-0.82 13.54,-1.13 4.52,-0.15 22.57,-1.37 4.52,-0.6"
+                 style="opacity:1;vector-effect:none;fill:none;stroke:#71717a;stroke-width:2px;stroke-opacity:1"
+                 id="path34" />
+            </g>
             <g
                class="points"
-               id="g33">
-              <g
-                 class="point"
-                 id="g29">
-                <path
-                   d="M 11.17,270 V 116.1 H 55.88 V 270 Z"
-                   style="opacity:1;vector-effect:none;fill:#3730a3;fill-opacity:1;stroke:#1e1b4b;stroke-width:1.5px;stroke-opacity:1"
-                   id="path28" />
-                <text
-                   class="bartext bartext-inside"
-                   text-anchor="middle"
-                   data-notex="1"
-                   x="0"
-                   y="0"
-                   style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#ffffff;fill-opacity:1"
-                   transform="translate(33.4625,132.1)"
-                   id="text28">6</text>
-              </g>
-              <g
-                 class="point"
-                 id="g30">
-                <path
-                   d="M 122.93,270 V 116.1 h 44.7 V 270 Z"
-                   style="opacity:1;vector-effect:none;fill:#3730a3;fill-opacity:1;stroke:#1e1b4b;stroke-width:1.5px;stroke-opacity:1"
-                   id="path29" />
-                <text
-                   class="bartext bartext-inside"
-                   text-anchor="middle"
-                   data-notex="1"
-                   x="0"
-                   y="0"
-                   style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#ffffff;fill-opacity:1"
-                   transform="translate(145.2175,132.1)"
-                   id="text29">6</text>
-              </g>
-              <g
-                 class="point"
-                 id="g31">
-                <path
-                   d="m 234.68,270 v 0 h 44.7 v 0 z"
-                   style="opacity:1;vector-effect:none;fill:#3730a3;fill-opacity:1;stroke:#1e1b4b;stroke-width:1.5px;stroke-opacity:1"
-                   id="path30" />
-              </g>
-              <g
-                 class="point"
-                 id="g32">
-                <path
-                   d="m 346.43,270 v 0 h 44.7 v 0 z"
-                   style="opacity:1;vector-effect:none;fill:#3730a3;fill-opacity:1;stroke:#1e1b4b;stroke-width:1.5px;stroke-opacity:1"
-                   id="path31" />
-              </g>
-            </g>
+               id="g36" />
+            <g
+               class="text"
+               id="g37" />
           </g>
           <g
-             class="trace bars"
-             style="opacity:1"
-             id="g40">
+             class="trace scatter trace354226"
+             style="opacity:1;stroke-miterlimit:2"
+             id="g44">
+            <g
+               class="fills"
+               id="g39" />
+            <g
+               class="errorbars"
+               id="g40" />
+            <g
+               class="lines"
+               id="g41" />
             <g
                class="points"
-               id="g39">
-              <g
+               id="g42">
+              <path
                  class="point"
-                 id="g35">
-                <path
-                   d="M 55.88,270 V 13.5 h 44.7 V 270 Z"
-                   style="opacity:1;vector-effect:none;fill:#e4e4e7;fill-opacity:1;stroke:#a1a1aa;stroke-width:1.5px;stroke-opacity:1"
-                   id="path34" />
-                <text
-                   class="bartext bartext-inside"
-                   text-anchor="middle"
-                   data-notex="1"
-                   x="0"
-                   y="0"
-                   style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#444444;fill-opacity:1"
-                   transform="translate(78.166523,29.5)"
-                   id="text34">10</text>
-              </g>
-              <g
-                 class="point"
-                 id="g36">
-                <path
-                   d="m 167.63,270 v -51.3 h 44.7 V 270 Z"
-                   style="opacity:1;vector-effect:none;fill:#e4e4e7;fill-opacity:1;stroke:#a1a1aa;stroke-width:1.5px;stroke-opacity:1"
-                   id="path35" />
-                <text
-                   class="bartext bartext-inside"
-                   text-anchor="middle"
-                   data-notex="1"
-                   x="0"
-                   y="0"
-                   style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#444444;fill-opacity:1"
-                   transform="translate(189.9175,234.7)"
-                   id="text35">2</text>
-              </g>
-              <g
-                 class="point"
-                 id="g37">
-                <path
-                   d="m 279.38,270 v 0 h 44.7 v 0 z"
-                   style="opacity:1;vector-effect:none;fill:#e4e4e7;fill-opacity:1;stroke:#a1a1aa;stroke-width:1.5px;stroke-opacity:1"
-                   id="path36" />
-              </g>
-              <g
-                 class="point"
-                 id="g38">
-                <path
-                   d="m 391.13,270 v 0 h 44.7 v 0 z"
-                   style="opacity:1;vector-effect:none;fill:#e4e4e7;fill-opacity:1;stroke:#a1a1aa;stroke-width:1.5px;stroke-opacity:1"
-                   id="path37" />
-              </g>
+                 transform="translate(387.41,21)"
+                 d="M 6,0 A 6,6 0 1 1 0,-6 6,6 0 0 1 6,0 Z"
+                 style="opacity:1;fill:#3730a3;fill-opacity:1;stroke-width:0px"
+                 id="path41" />
             </g>
+            <g
+               class="text"
+               id="g43" />
+          </g>
+          <g
+             class="trace scatter trace47728a"
+             style="opacity:1;stroke-miterlimit:2"
+             id="g50">
+            <g
+               class="fills"
+               id="g45" />
+            <g
+               class="errorbars"
+               id="g46" />
+            <g
+               class="lines"
+               id="g47" />
+            <g
+               class="points"
+               id="g48">
+              <path
+                 class="point"
+                 transform="translate(355.72,48.08)"
+                 d="M 6,0 A 6,6 0 1 1 0,-6 6,6 0 0 1 6,0 Z"
+                 style="opacity:1;fill:#18181b;fill-opacity:1;stroke-width:0px"
+                 id="path47" />
+            </g>
+            <g
+               class="text"
+               id="g49" />
           </g>
         </g>
       </g>
       <g
          class="overplot"
-         id="g43" />
+         id="g53" />
       <path
          class="xlines-above crisp"
          d="M 0,0"
          style="fill:none"
-         id="path43" />
+         id="path53" />
       <path
          class="ylines-above crisp"
          d="M 0,0"
          style="fill:none"
-         id="path44" />
+         id="path54" />
       <g
          class="overlines-above"
-         id="g44" />
+         id="g54" />
       <g
          class="xaxislayer-above"
-         id="g49">
+         id="g61">
         <g
            class="xtick"
-           id="g45">
+           id="g55">
           <text
              text-anchor="middle"
              x="0"
              y="383"
-             transform="translate(135.88)"
+             transform="translate(80)"
              style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
-             id="text44">Age Group 18-29</text>
+             id="text54">0</text>
         </g>
         <g
            class="xtick"
-           id="g46">
+           id="g56">
           <text
              text-anchor="middle"
              x="0"
              y="383"
-             transform="translate(247.63)"
              style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
-             id="text45">Age Group 30-49</text>
+             transform="translate(169.4)"
+             id="text55">20</text>
         </g>
         <g
            class="xtick"
-           id="g47">
+           id="g57">
           <text
              text-anchor="middle"
              x="0"
              y="383"
-             transform="translate(359.38)"
              style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
-             id="text46">Age Group 50-64</text>
+             transform="translate(258.8)"
+             id="text56">40</text>
         </g>
         <g
            class="xtick"
-           id="g48">
+           id="g58">
           <text
              text-anchor="middle"
              x="0"
              y="383"
-             transform="translate(471.13)"
              style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
-             id="text47">Age Group 65+</text>
+             transform="translate(348.2)"
+             id="text57">60</text>
+        </g>
+        <g
+           class="xtick"
+           id="g59">
+          <text
+             text-anchor="middle"
+             x="0"
+             y="383"
+             style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
+             transform="translate(437.6)"
+             id="text58">80</text>
+        </g>
+        <g
+           class="xtick"
+           id="g60">
+          <text
+             text-anchor="middle"
+             x="0"
+             y="383"
+             style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
+             transform="translate(527)"
+             id="text59">100</text>
         </g>
       </g>
       <g
          class="yaxislayer-above"
-         id="g56">
+         id="g68">
         <g
            class="ytick"
-           id="g50">
+           id="g62">
           <text
              text-anchor="end"
              x="79"
              y="4.1999998"
-             transform="translate(0,370)"
+             transform="translate(0,356.89)"
              style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
-             id="text49">0</text>
+             id="text61">0</text>
         </g>
         <g
            class="ytick"
-           id="g51">
+           id="g63">
           <text
              text-anchor="end"
              x="79"
              y="4.1999998"
              style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
-             transform="translate(0,318.7)"
-             id="text50">2</text>
+             transform="translate(0,308.31)"
+             id="text62">20</text>
         </g>
         <g
            class="ytick"
-           id="g52">
+           id="g64">
           <text
              text-anchor="end"
              x="79"
              y="4.1999998"
              style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
-             transform="translate(0,267.4)"
-             id="text51">4</text>
+             transform="translate(0,259.74)"
+             id="text63">40</text>
         </g>
         <g
            class="ytick"
-           id="g53">
+           id="g65">
           <text
              text-anchor="end"
              x="79"
              y="4.1999998"
              style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
-             transform="translate(0,216.1)"
-             id="text52">6</text>
+             transform="translate(0,211.16)"
+             id="text64">60</text>
         </g>
         <g
            class="ytick"
-           id="g54">
+           id="g66">
           <text
              text-anchor="end"
              x="79"
              y="4.1999998"
              style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
-             transform="translate(0,164.8)"
-             id="text53">8</text>
+             transform="translate(0,162.58)"
+             id="text65">80</text>
         </g>
         <g
            class="ytick"
-           id="g55">
+           id="g67">
           <text
              text-anchor="end"
              x="79"
              y="4.1999998"
              style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
-             transform="translate(0,113.5)"
-             id="text54">10</text>
+             transform="translate(0,114)"
+             id="text66">100</text>
         </g>
       </g>
       <g
          class="overaxes-above"
-         id="g57" />
+         id="g69" />
     </g>
   </g>
   <g
      class="polarlayer"
-     id="g60" />
+     id="g72" />
   <g
      class="smithlayer"
-     id="g61" />
+     id="g73" />
   <g
      class="ternarylayer"
-     id="g62" />
+     id="g74" />
   <g
      class="geolayer"
-     id="g63" />
+     id="g75" />
   <g
      class="funnelarealayer"
-     id="g64" />
+     id="g76" />
   <g
      class="pielayer"
-     id="g65" />
+     id="g77" />
   <g
      class="iciclelayer"
-     id="g66" />
+     id="g78" />
   <g
      class="treemaplayer"
-     id="g67" />
+     id="g79" />
   <g
      class="sunburstlayer"
-     id="g68" />
+     id="g80" />
   <g
      class="glimages"
-     id="g69" />
+     id="g81" />
   <defs
-     id="topdefs-60da9f">
+     id="topdefs-bdf9b5">
     <g
        class="clips"
-       id="g70" />
+       id="g82" />
     <clipPath
-       id="legend60da9f">
+       id="legendbdf9b5">
       <rect
          width="92"
          height="48"
          x="0"
          y="0"
-         id="rect70" />
+         id="rect82" />
     </clipPath>
   </defs>
   <g
      class="layer-above"
-     id="g73">
+     id="g85">
     <g
        class="imagelayer"
-       id="g71" />
+       id="g83" />
     <g
        class="shapelayer"
-       id="g72" />
+       id="g84" />
   </g>
   <g
      class="infolayer"
-     id="g92"
-     transform="translate(-16.790012,-93.168043)">
+     id="g104"
+     transform="translate(-16.324728,-93.716518)">
     <g
        class="legend"
        pointer-events="all"
        transform="translate(535.94,100)"
-       id="g88">
+       id="g100">
       <rect
          class="bg"
          shape-rendering="crispEdges"
@@ -533,48 +548,48 @@
          x="0"
          y="0"
          style="fill:#ffffff;fill-opacity:1;stroke:#444444;stroke-width:0px;stroke-opacity:1"
-         id="rect73" />
+         id="rect85" />
       <g
          class="scrollbox"
-         clip-path="url(#legend60da9f)"
-         id="g87">
+         clip-path="url(#legendbdf9b5)"
+         id="g99">
         <g
            class="groups"
-           id="g86">
+           id="g98">
           <g
              class="traces"
              transform="translate(0,14.5)"
              style="opacity:1"
-             id="g79">
+             id="g91">
             <text
                class="legendtext"
                text-anchor="start"
                x="40"
                y="4.6799998"
                style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#444444;fill-opacity:1"
-               id="text73">Group A</text>
+               id="text85">Group A</text>
             <g
                class="layers"
                style="opacity:1"
-               id="g78">
+               id="g90">
               <g
                  class="legendfill"
-                 id="g74" />
+                 id="g86" />
               <g
                  class="legendlines"
-                 id="g75" />
+                 id="g87" />
               <g
                  class="legendsymbols"
-                 id="g77">
+                 id="g89">
                 <g
                    class="legendpoints"
-                   id="g76">
+                   id="g88">
                   <path
-                     class="legendundefined"
-                     d="M 6,6 H -6 V -6 H 6 Z"
+                     class="scatterpts"
                      transform="translate(20)"
-                     style="fill:#3730a3;fill-opacity:1;stroke:#1e1b4b;stroke-width:1.5px;stroke-opacity:1"
-                     id="path75" />
+                     d="M 6,0 A 6,6 0 1 1 0,-6 6,6 0 0 1 6,0 Z"
+                     style="opacity:1;fill:#3730a3;fill-opacity:1;stroke-width:0px"
+                     id="path87" />
                 </g>
               </g>
             </g>
@@ -585,42 +600,42 @@
                width="86.478516"
                height="19"
                style="fill:#000000;fill-opacity:0"
-               id="rect78" />
+               id="rect90" />
           </g>
           <g
              class="traces"
              transform="translate(0,33.5)"
              style="opacity:1"
-             id="g85">
+             id="g97">
             <text
                class="legendtext"
                text-anchor="start"
                x="40"
                y="4.6799998"
                style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#444444;fill-opacity:1"
-               id="text79">Group B</text>
+               id="text91">Group B</text>
             <g
                class="layers"
                style="opacity:1"
-               id="g84">
+               id="g96">
               <g
                  class="legendfill"
-                 id="g80" />
+                 id="g92" />
               <g
                  class="legendlines"
-                 id="g81" />
+                 id="g93" />
               <g
                  class="legendsymbols"
-                 id="g83">
+                 id="g95">
                 <g
                    class="legendpoints"
-                   id="g82">
+                   id="g94">
                   <path
-                     class="legendundefined"
-                     d="M 6,6 H -6 V -6 H 6 Z"
+                     class="scatterpts"
                      transform="translate(20)"
-                     style="fill:#e4e4e7;fill-opacity:1;stroke:#a1a1aa;stroke-width:1.5px;stroke-opacity:1"
-                     id="path81" />
+                     d="M 6,0 A 6,6 0 1 1 0,-6 6,6 0 0 1 6,0 Z"
+                     style="opacity:1;fill:#18181b;fill-opacity:1;stroke-width:0px"
+                     id="path93" />
                 </g>
               </g>
             </g>
@@ -631,7 +646,7 @@
                width="86.478516"
                height="19"
                style="fill:#000000;fill-opacity:0"
-               id="rect84" />
+               id="rect96" />
           </g>
         </g>
       </g>
@@ -644,14 +659,22 @@
          x="0"
          y="0"
          style="fill:#808ba4;fill-opacity:1"
-         id="rect87" />
+         id="rect99" />
     </g>
     <g
        class="g-xtitle"
-       id="g90" />
+       id="g102">
+      <text
+         class="xtitle"
+         x="303.5"
+         y="422"
+         text-anchor="middle"
+         style="font-weight:normal;font-size:14px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444"
+         id="text101">Score</text>
+    </g>
     <g
        class="g-ytitle"
-       id="g91">
+       id="g103">
       <text
          class="ytitle"
          transform="rotate(-90,42,235)"
@@ -659,7 +682,7 @@
          y="235"
          text-anchor="middle"
          style="font-weight:normal;font-size:14px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444"
-         id="text90">Count</text>
+         id="text102">Percentile</text>
     </g>
   </g>
 </svg>

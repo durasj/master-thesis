@@ -2,8 +2,8 @@
 <svg
    class="main-svg"
    width="620"
-   height="340"
-   viewBox="0 0 620 340"
+   height="300"
+   viewBox="0 0 620 300"
    version="1.1"
    id="svg92"
    sodipodi:docname="Plot_Points.svg"
@@ -21,9 +21,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.89444444"
-     inkscape:cx="589.75155"
-     inkscape:cy="334.84472"
+     inkscape:zoom="1.2649355"
+     inkscape:cx="311.87362"
+     inkscape:cy="179.85107"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -99,7 +99,7 @@
   <g
      class="cartesianlayer"
      id="g59"
-     transform="translate(-11.332977,-69.609375)">
+     transform="translate(-13.735521,-88.551794)">
     <g
        class="subplot xy"
        id="g58">
@@ -577,7 +577,7 @@
   <g
      class="infolayer"
      id="g92"
-     transform="translate(-11.332977,-69.609375)">
+     transform="translate(-13.735521,-88.551794)">
     <g
        class="legend"
        pointer-events="all"

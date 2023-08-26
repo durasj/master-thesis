@@ -54,7 +54,7 @@
 
 % SVG setup
 \svgpath{{/assets/}}
-\svgsetup{inkscapelatex=false}
+\svgsetup{inkscapelatex=false, inkscapearea=nocrop}
 
 % Control over floating of figure
 \usepackage{float}
@@ -95,3 +95,6 @@
 % Spacing between paragraphs and lines
 \setlength{\parskip}{0.25em}
 \onehalfspacing
+
+% Custom rotate table headings
+\NewDocumentCommand{\rotheading}{O{30} O{2em} m}{\makebox[#2][l]{\rotatebox{#1}{\textbf{#3}}}}
