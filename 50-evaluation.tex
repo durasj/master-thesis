@@ -1,18 +1,175 @@
 \chapter{Evaluation}
 
-\todo[inline]{Outline of the covered topics will be added when finishing the chapter.}
-
-\section{Accessibility Evaluation}
-\label{Evaluation-Accessibility}
-
-\todo[inline]{Automated and manual test results - wcag template report.}
+Closely following the \nameref{chap:methodology}, the following chapter shows the extent and results of the performed tests.
+It starts with the functional tests checking for correctness, continues with the accessibility evaluation, and ends with the comparative usability study.
 
 \section{Functional Testing}
 \label{Evaluation-Tests}
 
-\todo[inline]{Unit tests - brief description of lcov results and exceptions. Example unit tests.}
+This section is divided into two parts reflecting significant differences in the used types of tests: low-level unit tests and high-level user interface tests.
+Both sections outline the implementation, scope, and achieved results.
 
-\todo[inline]{List of UI tests based on use cases and showcase of some selected ones. Description of exceptions.}
+\subsection{Unit Tests}
+
+To cover all important reusable parts (units) of the software, all files within the $/src/lib$ directory\footnote{Available at \href{https://github.com/durasj/chipsandcode/tree/6decf05115ba1d4ca927de42f63c8431b1ac3124/src/lib}{github.com/durasj/chipsandcode/tree/6decf05/src/lib}.} had a corresponding $.test.ext$ file.
+The only expections were: Svelte components that would be better suited for Cypress Component Testing\footnote{Available at \url{https://docs.cypress.io/guides/component-testing/overview}.} - which did not yet have a stable support for Svelte; type definition files; and files that were tested indirectly.
+
+Figure~\ref{fig:test-unit-example} shows an example unit test that belongs to the test suite for output processing.
+It checks the output object can be created from text input, it allows observing the loaded values, and can be serialized back.
+
+In total, 181 unit tests spread over 16 test suites covered over 95\% of the 1500 targeted lines as can be seen in Figure~\ref{fig:test-coverage}.
+
+Notably, excluded from this report is the coverage of all \gls{hdl} and \gls{tst} files making up the built-in and Project 1 chips from Nand2Tetris.
+The built parsers were tested by using all (dozens) built-in and Project 1 files on the input with the expectation the output matches snapshots.
+For example, for \gls{hdl}, these can be seen in the directory $/src/lib/editor/hdl/testing$.
+The same applies to the introduced \gls{tst} parser.
+
+Moreover, all produced \gls{ast} files were used to test the chip factory to verify it can process them.
+To prevent duplication, this input was the same output parser tests produced.
+One important limitation of this approach is these chip factory tests are no longer isolated as they require to be run after the parser tests.
+However, in practice, after the first run, parser snapshots are persisted and do not change, which makes it at most a possible source of frustration for the developer adding new relevant tests.
+
+\begin{figure}[H]
+\centering
+\begin{minted}[breaklines=true, fontsize=\small]{ts}
+it('Can be created from existing output text', () => {
+  const output = Output.fromText(`|   a   |   b   |  out  |
+  |   0   |   0   |   1   |
+  |   1   |   0   |   1   |`);
+
+  expect(output.getRow(0)).toStrictEqual(
+    [false, false, true]
+  );
+  expect(output.getRow(1)).toStrictEqual(
+    [true, false, true]
+  );
+
+  expect(output.getText()).toBe(`| a | b |out|
+| 0 | 0 | 1 |
+| 1 | 0 | 1 |`);
+});
+\end{minted}
+    \caption{Example unit test.}
+    \label{fig:test-unit-example}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=380pt, keepaspectratio]{Unit_Coverage}
+    \caption{Testing framework run output and coverage report.}
+    \label{fig:test-coverage}
+\end{figure}
+
+\subsection{UI and Accessibility Tests}
+
+Following the chosen methodology, the first step to writing UI and accessibility tests was to identify all important use cases:
+
+\begin{enumerate}
+    \item User visits the home page, reads the welcome text, and uses the call-to-action button.
+    \item User navigates to the learning content using the main menu.
+    \item User navigates to the next section of the learning content using the side menu.
+    \item User reads the learning content and navigates to the subsequent section using the "next" button.
+    \item User navigates to the previous section using the "previous" button.
+    \item User switches from the light theme to the dark theme while looking at the learning content.
+    \item User interacts with the embedded Hardware \gls{ide}.
+    \item User navigates to the Hardware \gls{ide} using the main menu.
+    \item User loads the example Xor chip in the Hardware \gls{ide}.
+    \item User changes the input for the Xor chip in the Hardware \gls{ide} and observes the result.
+    \item User changes the Xor chip's definition in the Hardware \gls{ide} and observes the result.
+    \item User changes the Xor chip's test script in the Hardware \gls{ide} and observes the results.
+    \item User changes the Xor chip's expected output in the Hardware \gls{ide} and observes the results.
+    \item User switches from the light theme to the dark theme while at the example Xor chip.
+    \item User creates a new Experiment.
+    \item User changes an Experiment name.
+    \item User copies the link to the Experiment using the share functionality.
+    \item User downloads and deletes an Experiment.
+    \item User opens the About page using the main menu, reads the content, and opens links.
+    \item User opens the sign-in page and reads the text.
+\end{enumerate}
+
+These use cases were grouped by the screen they were related to and implemented as Cypress tests.
+As part of the test, all pages are checked for accessibility violations\footnote{Using aXe, see \url{https://github.com/dequelabs/axe-core/blob/0316e72/doc/rule-descriptions.md} for the list of performed checks.}.
+Additionally, the same pages were also checked for visual regressions using a plugin\footnote{Available at \url{https://github.com/FRSOURCE/cypress-plugin-visual-regression-diff}.} that calculated the difference between the captured and persisted screenshots.
+Importantly, all tests are completely isolated and all \gls{api} calls were stubbed to ensure there are no side effects.
+Cypress automatically clears any state produced within the browser, but any state other side effects would create would not be cleared.
+
+Figure~\ref{fig:test-cypress-example} shows an example Cypress test that belongs to the test suite for the home page.
+It opens the page, checks it contains the heading, performs visual regression test, accessibility checks, and verifies the call-to-action button redirects correctly.
+
+Altogether, the software passed 19 tests spread over five test suites as can be seen in Figure~\ref{fig:test-cypress}.
+
+\begin{figure}[H]
+\begin{minted}[breaklines=true, fontsize=\small]{ts}
+describe('Home', () => {
+  it('Contains welcome message and link to content', () => {
+    cy.visit('/');
+    cy.injectAxe();
+
+    cy.contains('Wondering how computers work?');
+
+    cy.matchImage();
+
+    cy.checkA11y();
+
+    cy.contains('Start Learning').click();
+
+    cy.location('pathname').should('eq', '/learn/hardware/boolean-logic');
+  });
+});
+\end{minted}
+    \caption{Example simplified Cypress test.}
+    \label{fig:test-cypress-example}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=380pt, keepaspectratio]{Cypress_Output}
+    \caption{Output from Cypress run.}
+    \label{fig:test-cypress}
+\end{figure}
+
+As mentioned in the methodology, not all use cases were covered, these consisted of the following known use cases:
+
+\begin{enumerate}
+    \item \textbf{Chip Download}: This functionality was not covered as it is not trivial to test downloads in Cypress, especially if we consider it is a zip file that would have to be opened and inspected.
+    \item \textbf{Dark Mode}: While this functionality is covered using visual regression tests to some extent, since it can be activated anywhere, it would require testing the same functionality in both modes everywhere. As this functionality is considered a "nice to have" opt-in feature, it was not considered worth it.
+\end{enumerate}
+
+\section{Accessibility Evaluation}
+\label{Evaluation-Accessibility}
+
+First of all, the accessibility of the website was tested using aXe core\footnote{Available at \url{https://github.com/dequelabs/axe-core}.} during the Cypress test run.
+In total, seven invocations to test the accessibility of various pages in several states were performed, and all passed.
+There were three exceptions where the accessibility checks had to be disabled:
+
+\begin{itemize}
+    \item \textbf{Empty Table Header} rule, which was confused by the use of $MathML$ in table headers.
+    \item \textbf{Landmark Unique} rule, which was getting triggered on Monaco editor that is independent.
+    \item \textbf{Color Contrast} rule, which was triggered on Monaco Editor, but the editor provides an opt-in high contrast mode.
+\end{itemize}
+
+Secondly, an automated evaluation using browser extensions - Lighthouse\footnote{Available at \url{https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk}.} and aXe DevTools\footnote{Available at \url{https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd}.} built into the Chrome DevTools - was performed.
+Both tools reported no problems with the accessibility, as can be seen in Figure~\ref{fig:lighthouse-report} and Figure~\ref{fig:axe-report}.
+
+\begin{figure}[H]
+    \includegraphics[width=380pt, keepaspectratio]{Lighthouse_Report}
+    \caption{Lighthouse report summary.}
+    \label{fig:lighthouse-report}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=380pt, keepaspectratio]{Axe_Report}
+    \caption{aXe report summary.}
+    \label{fig:axe-report}
+\end{figure}
+
+Lastly, a manual \gls{wcag} testing by following the \gls{wcagem} report tool was performed.
+The report output from this tool can be found in Appendix~\ref{appendix:wcag-report}.
+The only potential problem that was identified during the testing involves dynamic updates to the UI.
+The author was unable to determine whether the automatically updated pin UI is usable when using assistive technology.
+For example, if the user changes some code in the editor and the list of pin updates, is this properly communicated using assistive technology?
+Similarly, if the input on the pins changes, is it clear the output pin value is updated automatically, and can the user navigate to it easily?
+
+Importantly, the software was not tested by third-party users who are either disabled or experienced in using assistive technologies.
+While the author made the best effort to take into consideration accessibility, it is possible some of the checks were misunderstood.
 
 \section{Comparative Usability Testing}
 \label{Evaluation-UX}

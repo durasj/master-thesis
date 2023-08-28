@@ -1,4 +1,5 @@
 \chapter{Methodology}
+\label{chap:methodology}
 
 The main paradigm used for this thesis is Design Science Research (DSR), as currently outlined by \textcite{brocke2020designscience}.
 The author used existing theories, frameworks, and models to produce and evaluate a new innovative artifact - instantiation, as categorised by \textcite{hevner2004designscience}.
@@ -15,7 +16,7 @@ After that, it covers the evaluation of Proposed Software consists of the follow
     \item \textbf{Comparative Study} to collect and analyse mainly quantitative and partially qualitative data on the efficiency and usability of Proposed Software and Existing Software while performing the same set of tasks under controlled conditions.
 \end{itemize}
 
-\section{Design}
+\section{Software Design}
 
 \todo[inline]{This section will contain just a few paragraphs. In literature review I explain options/background, methodology here explains how I made choices, design \& implementation chapter shows what exactly I have chosen and how I incorporated it.}
 
@@ -28,7 +29,7 @@ After that, it covers the evaluation of Proposed Software consists of the follow
 Multiple types of automated tests were utilized to verify the functionality of Proposed Software.
 
 \textbf{Unit Tests} were used for the verification of granular parts of the software with clear inputs and outputs.
-That includes all proposed parsers that accept a text on the input and provide an \gls{ast} on the output; a factory that accepts an \gls{ast} on the input and produces chips on the output; elementary built-in and simple custom chips that have a clear interface and a definite number of combinations of inputs and outputs; and \gls{rest} \gls{api} that accepts an \gls{http} request represented as a \gls{js} object on the input and provides a \gls{http} response represented as a \gls{js} object on the output.
+That includes all proposed parsers that accept a text on the input and provide an \gls{ast} on the output; a factory that accepts an \gls{ast} on the input and produces chips on the output; elementary built-in and simple custom chips that have a clear interface and a definite number of combinations of inputs and outputs; and other similar reusable abstractions.
 The exact unit test framework chosen for this purpose was Vitest\footnote{Available at \url{https://vitest.dev/}.}, as it is well-integrated with the code bundler Vite\footnote{Available at \url{https://vitejs.dev/}.} the chosen SvelteKit framework\footnote{Available at \url{https://kit.svelte.dev/}.} is based on.
 The expected coverage on all files providing the mentioned functionality should exceed 80\%, which corresponds to the median coverage on projects at Google and is set to prevent an exponential increase in effort required to increase coverage further - see \nameref{Literature-Software-Testing}.
 
@@ -291,7 +292,7 @@ Visually, results are presented using:
 
 \subsection{Limitations}
 
-The comparative study has several design limitations the author is aware of:
+The comparative study had several notable design limitations the author is aware of and that were not addressed:
 
 \begin{itemize}
     \item \textbf{Sampling Bias}: The study consists primarily of the extended social circle of the author and only includes participants who agreed to participate (self-selection bias).

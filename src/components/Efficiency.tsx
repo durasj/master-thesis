@@ -16,7 +16,7 @@ export function Efficiency() {
           Efficiency
         </SectionHeading>
         <p className="mt-8 font-display text-4xl font-bold tracking-tight text-zinc-900">
-          Participants were observed to determine the time spent on tasks and the number of times they were confused.
+          Participants were observed to determine the time spent on tasks and the number of times they got confused.
         </p>
         <p className="mt-4 text-lg tracking-tight text-zinc-700">
           The collected data included the time it took to get productive with the learning tool, the time it took to perform individual tasks, and the number of times the participant got confused and either asked for help or was offered help.

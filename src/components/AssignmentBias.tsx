@@ -26,23 +26,27 @@ export function AssignmentBias() {
           While there was an effort to distribute participants equally between
           the two groups, some differences still remained. Correlation was
           explored between profile attributes that differed the most using
-          linear regression (the least sum of squares).
+          linear regression (the least sum of squares). The relatively strong
+          correlation (<pre className="inline-block">r(11)</pre> ranging from{' '}
+          <pre className="inline-block">-.27</pre> to <pre className="inline-block">-.69</pre>,{' '}
+          <pre className="inline-block">p {'<'} 0.1</pre>) in the case of education and job suggests
+          the shown results could have been skewed in favor of Group B - the existing tool.
         </p>
       </Container>
       <Container size="lg">
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:h-96 h-[60rem]">
+        <div className="grid h-[60rem] grid-cols-1 gap-2 lg:h-96 lg:grid-cols-2">
           <EducationCorrelationPlot />
 
           <EducationScoreCorrelationPlot />
         </div>
 
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:h-96 h-[60rem]">
+        <div className="grid h-[60rem] grid-cols-1 gap-2 lg:h-96 lg:grid-cols-2">
           <OccupationCorrelationPlot />
 
           <OccupationScoreCorrelationPlot />
         </div>
 
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:h-96 h-[60rem]">
+        <div className="grid h-[60rem] grid-cols-1 gap-2 lg:h-96 lg:grid-cols-2">
           <AgeCorrelationPlot />
 
           <AgeScoreCorrelationPlot />
