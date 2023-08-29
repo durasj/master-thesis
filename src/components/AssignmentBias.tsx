@@ -29,8 +29,8 @@ export function AssignmentBias() {
           linear regression (the least sum of squares). The relatively strong
           correlation (<pre className="inline-block">r(11)</pre> ranging from{' '}
           <pre className="inline-block">-.27</pre> to <pre className="inline-block">-.69</pre>,{' '}
-          <pre className="inline-block">p {'<'} 0.1</pre>) in the case of education and job suggests
-          the shown results could have been skewed in favor of Group B - the existing tool.
+          <pre className="inline-block">p {'<'} 0.1</pre>) in the case of education and occupation suggests
+          the shown results could be skewed in favor of Group B - the existing tool.
         </p>
       </Container>
       <Container size="lg">

@@ -71,11 +71,11 @@ export function About() {
               </a>
               of people from developing countries relies on smartphones!). Chips
               and Code aims to reimplement the same functionality using the
-              modern web with improved user experience.
+              modern web with an improved user experience.
             </p>
 
             <p className="mt-4 text-lg tracking-tight text-zinc-700">
-              This webpage captures just a small part of the full research done
+              This webpage captures just a small part of the full research conducted
               as a master&apos;s thesis at the{' '}
               <a
                 href="https://www.universityofgalway.ie"
