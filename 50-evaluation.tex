@@ -1,12 +1,12 @@
 \chapter{Evaluation}
 
-Closely following the \nameref{chap:methodology}, the following chapter shows the extent and results of the performed tests.
+Closely following \autoref{chap:methodology}, the following chapter shows the extent and results of the performed tests.
 It starts with the functional tests checking for correctness, continues with the accessibility evaluation, and ends with the comparative usability study.
 
 \section{Functional Testing}
 \label{Evaluation-Tests}
 
-This section is divided into two parts reflecting significant differences in the used types of tests: low-level unit tests and high-level user interface tests.
+This section is divided into two parts reflecting significant differences in the used types of tests: low-level unit tests and high-level \gls{ui} tests.
 Both sections outline the implementation, scope, and achieved results.
 
 \subsection{Unit Tests}
@@ -61,7 +61,7 @@ it('Can be created from existing output text', () => {
 
 \subsection{UI and Accessibility Tests}
 
-Following the chosen methodology, the first step to writing UI and accessibility tests was to identify all important use cases:
+Following the chosen methodology, the first step to writing \gls{ui} and accessibility tests was to identify all important use cases:
 
 \begin{enumerate}
     \item User visits the home page, reads the welcome text, and uses the call-to-action button.
@@ -88,7 +88,7 @@ Following the chosen methodology, the first step to writing UI and accessibility
 
 These use cases were grouped by the screen they were related to and implemented as Cypress tests.
 As part of the test, all pages are checked for accessibility violations\footnote{Using aXe, see \url{https://github.com/dequelabs/axe-core/blob/0316e72/doc/rule-descriptions.md} for the list of performed checks.}.
-Additionally, the same pages were also checked for visual regressions using a plugin\footnote{Available at \url{https://github.com/FRSOURCE/cypress-plugin-visual-regression-diff}.} that calculated the difference between the captured and persisted screenshots.
+Additionally, the same pages were also checked for visual regressions using a plugin\footnote{A Cypress plugin, available at: \url{https://github.com/FRSOURCE/cypress-plugin-visual-regression-diff}.} that calculated the difference between the captured and persisted screenshots.
 Importantly, all tests are completely isolated and all \gls{api} calls were stubbed to ensure there are no side effects.
 Cypress automatically clears any state produced within the browser, but any state other side effects would create would not be cleared.
 
@@ -131,6 +131,7 @@ As mentioned in the methodology, not all use cases were covered, these consisted
 \begin{enumerate}
     \item \textbf{Chip Download}: This functionality was not covered as it is not trivial to test downloads in Cypress, especially if we consider it is a zip file that would have to be opened and inspected.
     \item \textbf{Dark Mode}: While this functionality is covered using visual regression tests to some extent, since it can be activated anywhere, it would require testing the same functionality in both modes everywhere. As this functionality is considered a "nice to have" opt-in feature, it was not considered worth it.
+    \item \textbf{Responsivity}: Similarly to the previous point, the application can be used in all kinds of environments with basically unlimited range of screen sizes. While testing the same functionality on a large range of screen sizes could be valuable, it was not possible with the limited time allocated to the thesis.
 \end{enumerate}
 
 \section{Accessibility Evaluation}
@@ -141,7 +142,7 @@ In total, seven invocations to test the accessibility of various pages in severa
 There were three exceptions where the accessibility checks had to be disabled:
 
 \begin{itemize}
-    \item \textbf{Empty Table Header} rule, which was confused by the use of $MathML$ in table headers.
+    \item \textbf{Empty Table Header} rule, which was confused by the use of MathML in table headers.
     \item \textbf{Landmark Unique} rule, which was getting triggered on Monaco editor that is independent.
     \item \textbf{Color Contrast} rule, which was triggered on Monaco Editor, but the editor provides an opt-in high contrast mode.
 \end{itemize}
@@ -163,8 +164,8 @@ Both tools reported no problems with the accessibility, as can be seen in Figure
 
 Lastly, a manual \gls{wcag} testing by following the \gls{wcagem} report tool was performed.
 The report output from this tool can be found in Appendix~\ref{appendix:wcag-report}.
-The only potential problem that was identified during the testing involves dynamic updates to the UI.
-The author was unable to determine whether the automatically updated pin UI is usable when using assistive technology.
+The only potential problem that was identified during the testing involves dynamic updates to the \gls{ui}.
+The author was unable to determine whether the automatically updated pin \gls{ui} is usable when using assistive technology.
 For example, if the user changes some code in the editor and the list of pin updates, is this properly communicated using assistive technology?
 Similarly, if the input on the pins changes, is it clear the output pin value is updated automatically, and can the user navigate to it easily?
 
@@ -208,7 +209,7 @@ The list of participants and their profiles within Group A can be seen in Table~
     \centering
     \caption{Group B participant profiles.}
     \label{table:evaluation-profile-b}
-    \begin{tabular}{ l l l l l l l l }
+    \begin{tabular}{ l l l l l l l l}
         \rotheading{Person} & \rotheading{Prior Exp.} & \rotheading{Education} & \rotheading{Occupation} & \rotheading{Age Group} & \rotheading{Paid} & \rotheading{Intr. Motiv.} & \rotatebox{30}{\textbf{Platform}} \\ \hline
         \textbf{P} & 0 & 1 & 1 & 18-29 & 0 & 2 & Windows 10 laptop \\ \hline
         \textbf{S} & 0 & 1 & 0 & 30-49 & 0 & 1 & Windows 10 desktop \\ \hline

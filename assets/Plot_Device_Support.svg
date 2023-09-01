@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="main-svg"
+   width="600"
+   height="320"
+   viewBox="0 0 600 320"
+   version="1.1"
+   id="svg86"
+   sodipodi:docname="plot (1).svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview86"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs-dc35dd">
+    <g
+       class="clips"
+       id="g5">
+      <clipPath
+         id="clipdc35ddxyplot"
+         class="plotclip">
+        <rect
+           width="388"
+           height="270"
+           id="rect2"
+           x="0"
+           y="0" />
+      </clipPath>
+      <clipPath
+         class="axesclip"
+         id="clipdc35ddx">
+        <rect
+           x="80"
+           y="0"
+           width="388"
+           height="450"
+           id="rect3" />
+      </clipPath>
+      <clipPath
+         class="axesclip"
+         id="clipdc35ddy">
+        <rect
+           x="0"
+           y="100"
+           width="640"
+           height="270"
+           id="rect4" />
+      </clipPath>
+      <clipPath
+         class="axesclip"
+         id="clipdc35ddxy">
+        <rect
+           x="80"
+           y="100"
+           width="388"
+           height="270"
+           id="rect5" />
+      </clipPath>
+    </g>
+  </defs>
+  <g
+     class="cartesianlayer"
+     id="g53">
+    <g
+       class="subplot xy"
+       id="g52">
+      <g
+         class="layer-subplot"
+         id="g14">
+        <g
+           class="shapelayer"
+           id="g12" />
+        <g
+           class="imagelayer"
+           id="g13" />
+      </g>
+      <g
+         class="minor-gridlayer"
+         id="g17">
+        <g
+           class="x"
+           id="g15" />
+        <g
+           class="y"
+           id="g16" />
+      </g>
+      <g
+         class="gridlayer"
+         id="g23"
+         transform="translate(-28.234519,-91.309006)">
+        <g
+           class="x"
+           id="g18" />
+        <g
+           class="y"
+           id="g22">
+          <path
+             class="ygrid crisp"
+             transform="translate(0,317.65)"
+             d="M 80,0 H 468"
+             style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
+             id="path18" />
+          <path
+             class="ygrid crisp"
+             transform="translate(0,265.31)"
+             d="M 80,0 H 468"
+             style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
+             id="path19" />
+          <path
+             class="ygrid crisp"
+             transform="translate(0,212.96)"
+             d="M 80,0 H 468"
+             style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
+             id="path20" />
+          <path
+             class="ygrid crisp"
+             transform="translate(0,160.61)"
+             d="M 80,0 H 468"
+             style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
+             id="path21" />
+          <path
+             class="ygrid crisp"
+             transform="translate(0,108.27)"
+             d="M 80,0 H 468"
+             style="stroke:#eeeeee;stroke-width:1px;stroke-opacity:1"
+             id="path22" />
+        </g>
+      </g>
+      <g
+         class="zerolinelayer"
+         id="g24"
+         transform="translate(-28.234519,-91.309006)">
+        <path
+           class="yzl zl crisp"
+           transform="translate(0,370)"
+           d="M 80,0 H 468"
+           style="stroke:#444444;stroke-width:1px;stroke-opacity:1"
+           id="path23" />
+      </g>
+      <path
+         class="xlines-below"
+         id="path24"
+         d="" />
+      <path
+         class="ylines-below"
+         id="path25"
+         d="" />
+      <g
+         class="overlines-below"
+         id="g25" />
+      <g
+         class="xaxislayer-below"
+         id="g26" />
+      <g
+         class="yaxislayer-below"
+         id="g27" />
+      <g
+         class="overaxes-below"
+         id="g28" />
+      <g
+         class="plot"
+         transform="translate(51.765481,8.690994)"
+         clip-path="url(#clipdc35ddxyplot)"
+         id="g38">
+        <g
+           class="barlayer mlayer"
+           id="g37">
+          <g
+             class="trace bars"
+             style="opacity:1"
+             id="g32">
+            <g
+               class="points"
+               id="g31">
+              <g
+                 class="point"
+                 id="g29">
+                <path
+                   d="M 19.4,270 V 13.5 H 97 V 270 Z"
+                   style="opacity:1;vector-effect:none;fill:#3730a3;fill-opacity:1;stroke:#1e1b4b;stroke-width:1.5px;stroke-opacity:1"
+                   id="path28" />
+                <text
+                   class="bartext bartext-inside"
+                   text-anchor="middle"
+                   data-notex="1"
+                   x="0"
+                   y="0"
+                   style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#ffffff;fill-opacity:1"
+                   transform="translate(58.136523,29.5)"
+                   id="text28">98</text>
+              </g>
+              <g
+                 class="point"
+                 id="g30">
+                <path
+                   d="M 213.4,270 V 13.5 H 291 V 270 Z"
+                   style="opacity:1;vector-effect:none;fill:#3730a3;fill-opacity:1;stroke:#1e1b4b;stroke-width:1.5px;stroke-opacity:1"
+                   id="path29" />
+                <text
+                   class="bartext bartext-inside"
+                   text-anchor="middle"
+                   data-notex="1"
+                   x="0"
+                   y="0"
+                   style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#ffffff;fill-opacity:1"
+                   transform="translate(252.13652,29.5)"
+                   id="text29">98</text>
+              </g>
+            </g>
+          </g>
+          <g
+             class="trace bars"
+             style="opacity:1"
+             id="g36">
+            <g
+               class="points"
+               id="g35">
+              <g
+                 class="point"
+                 id="g33">
+                <path
+                   d="M 97,270 V 154.84 h 77.6 V 270 Z"
+                   style="opacity:1;vector-effect:none;fill:#e4e4e7;fill-opacity:1;stroke:#a1a1aa;stroke-width:1.5px;stroke-opacity:1"
+                   id="path32" />
+                <text
+                   class="bartext bartext-inside"
+                   text-anchor="middle"
+                   data-notex="1"
+                   x="0"
+                   y="0"
+                   style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#444444;fill-opacity:1"
+                   transform="translate(135.73652,170.84)"
+                   id="text32">44</text>
+              </g>
+              <g
+                 class="point"
+                 id="g34">
+                <path
+                   d="M 291,270 V 84.17 h 77.6 V 270 Z"
+                   style="opacity:1;vector-effect:none;fill:#e4e4e7;fill-opacity:1;stroke:#a1a1aa;stroke-width:1.5px;stroke-opacity:1"
+                   id="path33" />
+                <text
+                   class="bartext bartext-inside"
+                   text-anchor="middle"
+                   data-notex="1"
+                   x="0"
+                   y="0"
+                   style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#444444;fill-opacity:1"
+                   transform="translate(329.8,100.17)"
+                   id="text33">71</text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g
+         class="overplot"
+         id="g39" />
+      <path
+         class="xlines-above crisp"
+         d="M 0.31189832,5.9693016"
+         style="fill:none"
+         id="path39" />
+      <path
+         class="ylines-above crisp"
+         d="M 0.31189832,5.9693016"
+         style="fill:none"
+         id="path40" />
+      <g
+         class="overlines-above"
+         id="g40" />
+      <g
+         class="xaxislayer-above"
+         id="g43"
+         transform="translate(-25.478455,1.1180124)">
+        <g
+           class="xtick"
+           id="g41"
+           transform="rotate(-30,-15.640014,486.78559)">
+          <text
+             text-anchor="start"
+             x="0"
+             y="383"
+             transform="rotate(30,88.5,707.2865)"
+             style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
+             id="text40">By Global Web Market Share</text>
+        </g>
+        <g
+           class="xtick"
+           id="g42"
+           transform="rotate(-30,163.40148,504.65587)">
+          <text
+             text-anchor="start"
+             x="599.08405"
+             y="144.6261"
+             transform="rotate(30)"
+             style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;text-align:center;text-anchor:middle;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
+             id="text41"><tspan
+               sodipodi:role="line"
+               id="tspan86"
+               x="599.08405"
+               y="144.6261">By Reliance on Smartphones</tspan><tspan
+               sodipodi:role="line"
+               id="tspan87"
+               x="599.08405"
+               y="159.6261">Developing Countries</tspan></text>
+        </g>
+      </g>
+      <g
+         class="yaxislayer-above"
+         id="g50"
+         transform="translate(-28.234519,-91.309006)">
+        <g
+           class="ytick"
+           id="g44">
+          <text
+             text-anchor="end"
+             x="79"
+             y="4.1999998"
+             transform="translate(0,370)"
+             style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
+             id="text43">0</text>
+        </g>
+        <g
+           class="ytick"
+           id="g45">
+          <text
+             text-anchor="end"
+             x="79"
+             y="4.1999998"
+             style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
+             transform="translate(0,317.65)"
+             id="text44">20</text>
+        </g>
+        <g
+           class="ytick"
+           id="g46">
+          <text
+             text-anchor="end"
+             x="79"
+             y="4.1999998"
+             style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
+             transform="translate(0,265.31)"
+             id="text45">40</text>
+        </g>
+        <g
+           class="ytick"
+           id="g47">
+          <text
+             text-anchor="end"
+             x="79"
+             y="4.1999998"
+             style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
+             transform="translate(0,212.96)"
+             id="text46">60</text>
+        </g>
+        <g
+           class="ytick"
+           id="g48">
+          <text
+             text-anchor="end"
+             x="79"
+             y="4.1999998"
+             style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
+             transform="translate(0,160.61)"
+             id="text47">80</text>
+        </g>
+        <g
+           class="ytick"
+           id="g49">
+          <text
+             text-anchor="end"
+             x="79"
+             y="4.1999998"
+             style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444;fill-opacity:1"
+             transform="translate(0,108.27)"
+             id="text48">100</text>
+        </g>
+      </g>
+      <g
+         class="overaxes-above"
+         id="g51" />
+    </g>
+  </g>
+  <defs
+     id="topdefs-dc35dd">
+    <clipPath
+       id="legenddc35dd">
+      <rect
+         width="152"
+         height="48"
+         x="0"
+         y="0"
+         id="rect64" />
+    </clipPath>
+  </defs>
+  <g
+     class="infolayer"
+     id="g86"
+     transform="translate(-28.234519,-91.309006)">
+    <g
+       class="legend"
+       pointer-events="all"
+       transform="translate(475.76,100)"
+       id="g82">
+      <rect
+         class="bg"
+         shape-rendering="crispEdges"
+         width="152"
+         height="48"
+         x="0"
+         y="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#444444;stroke-width:0px;stroke-opacity:1"
+         id="rect67" />
+      <g
+         class="scrollbox"
+         clip-path="url(#legenddc35dd)"
+         id="g81">
+        <g
+           class="groups"
+           id="g80">
+          <g
+             class="traces"
+             transform="translate(0,14.5)"
+             style="opacity:1"
+             id="g73">
+            <text
+               class="legendtext"
+               text-anchor="start"
+               x="40"
+               y="4.6799998"
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#444444;fill-opacity:1"
+               id="text67">Proposed Software</text>
+            <g
+               class="layers"
+               style="opacity:1"
+               id="g72">
+              <g
+                 class="legendfill"
+                 id="g68" />
+              <g
+                 class="legendlines"
+                 id="g69" />
+              <g
+                 class="legendsymbols"
+                 id="g71">
+                <g
+                   class="legendpoints"
+                   id="g70">
+                  <path
+                     class="legendundefined"
+                     d="M 6,6 H -6 V -6 H 6 Z"
+                     transform="translate(20)"
+                     style="fill:#3730a3;fill-opacity:1;stroke:#1e1b4b;stroke-width:1.5px;stroke-opacity:1"
+                     id="path69" />
+                </g>
+              </g>
+            </g>
+            <rect
+               class="legendtoggle"
+               x="0"
+               y="-9.5"
+               width="146.46289"
+               height="19"
+               style="fill:#000000;fill-opacity:0"
+               id="rect72" />
+          </g>
+          <g
+             class="traces"
+             transform="translate(0,33.5)"
+             style="opacity:1"
+             id="g79">
+            <text
+               class="legendtext"
+               text-anchor="start"
+               x="40"
+               y="4.6799998"
+               style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;fill:#444444;fill-opacity:1"
+               id="text73">Existing Software</text>
+            <g
+               class="layers"
+               style="opacity:1"
+               id="g78">
+              <g
+                 class="legendfill"
+                 id="g74" />
+              <g
+                 class="legendlines"
+                 id="g75" />
+              <g
+                 class="legendsymbols"
+                 id="g77">
+                <g
+                   class="legendpoints"
+                   id="g76">
+                  <path
+                     class="legendundefined"
+                     d="M 6,6 H -6 V -6 H 6 Z"
+                     transform="translate(20)"
+                     style="fill:#e4e4e7;fill-opacity:1;stroke:#a1a1aa;stroke-width:1.5px;stroke-opacity:1"
+                     id="path75" />
+                </g>
+              </g>
+            </g>
+            <rect
+               class="legendtoggle"
+               x="0"
+               y="-9.5"
+               width="146.46289"
+               height="19"
+               style="fill:#000000;fill-opacity:0"
+               id="rect78" />
+          </g>
+        </g>
+      </g>
+      <rect
+         class="scrollbar"
+         rx="20"
+         ry="3"
+         width="0"
+         height="0"
+         x="0"
+         y="0"
+         style="fill:#808ba4;fill-opacity:1"
+         id="rect81" />
+    </g>
+    <g
+       class="g-gtitle"
+       id="g83" />
+    <g
+       class="g-xtitle"
+       id="g84" />
+    <g
+       class="g-ytitle"
+       id="g85">
+      <text
+         class="ytitle"
+         transform="rotate(-90,42,235)"
+         x="42"
+         y="235"
+         text-anchor="middle"
+         style="font-weight:normal;font-size:14px;font-family:'Open Sans', verdana, arial, sans-serif;white-space:pre;opacity:1;fill:#444444"
+         id="text84">%</text>
+    </g>
+  </g>
+</svg>
