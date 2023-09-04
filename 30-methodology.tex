@@ -1,5 +1,5 @@
 \chapter{Methodology}
-\label{chap:methodology}
+\label{Methodology}
 
 The main paradigm used for this thesis is Design Science Research (DSR), as currently outlined by \textcite{brocke2020designscience}.
 The author of this thesis used existing theories, frameworks, and models to produce and evaluate a new innovative artifact - instantiation, as categorised by \textcite{hevner2004designscience}.
@@ -19,14 +19,16 @@ After that, it covers the evaluation of Proposed Software consists of the follow
 \section{Software Design}
 \label{sec:software-design}
 
-The design of the software tries to maximise the accessibility and usability of the software based on knowledge from sections on Human-System Interaction Ergonomics \autoref{Literature-HSIE-Benefits} and \autoref{Literature-HSIE-Implementation}.
-As such, the chosen approach to technology choice kept in mind access from as many devices as possible, taking note of data from \autoref{sec:device-types} and for people with as many limitations as possible.
-Moreover, considering some common problems when learning are lack of time and technical difficulties (see \autoref{sec:learning-state}), the chosen path was to streamline all interactions as much as possible.
-To draw on the knowledge from \autoref{sec:text-code} and \autoref{sec:creating-application}, the design consciously incorporated covered computer science and software engineering practices.
+The design of the software tries to maximise the accessibility and usability of the software based on knowledge from sections on \gls{hci} Ergonomics \Cref{Literature-HSIE-Benefits} and \Cref{Literature-HSIE-Implementation}.
+As such, the chosen approach to technology choice kept in mind access from as many devices as possible, taking note of data from \Cref{sec:device-types} and for people with as many limitations as possible.
+Moreover, considering some common problems when learning are lack of time and technical difficulties (see \Cref{sec:learning-state}), the chosen path was to streamline all interactions as much as possible.
+To draw on the knowledge from \Cref{sec:text-code} and \Cref{sec:creating-application}, the design consciously incorporated covered computer science and software engineering practices.
+Whenever possible, the design and implementation of Proposed Software is compared to Existing Software in terms of the chosen approach, its effects on the mentioned goals, or by using metrics.
 
 The author chose to reuse existing \gls{oss} if it fulfilled the requirements mentioned above and if the short-term investment into their own solution would be greater than the time saved long-term.
 To ensure Proposed Software is legally sound and reusable by others, it did not use any proprietary or copyleft parts (including the GPL-licensed Existing Software).
 At the same time, it was determined all choices must allow for publication under a permissive Open Source license to maximise possible further reuse.
+In the case of the adapted learning content specifically, since the original is available under a \gls{cc} BY-NC-SA 3.0 license\footnote{See \url{https://www.nand2tetris.org/license}}, the adapted content had to use the same license.
 To improve reproducibility, any chosen technologies, tools, and services had to be free (at least free-of-charge if not open) and easy to use.
 
 \section{Functional Testing}
@@ -36,7 +38,7 @@ Multiple types of automated tests were utilized to verify the functionality of P
 \textbf{Unit Tests} were used for the verification of granular parts of the software with clear inputs and outputs.
 That includes all proposed parsers that accept a text on the input and provide an \gls{ast} on the output; a factory that accepts an \gls{ast} on the input and produces chips on the output; elementary built-in and simple custom chips that have a clear interface and a definite number of combinations of inputs and outputs; and other similar reusable abstractions.
 The exact unit test framework chosen for this purpose was Vitest\footnote{Available at \url{https://vitest.dev/}.}, as it is well-integrated with the code bundler Vite\footnote{Available at \url{https://vitejs.dev/}.} the chosen SvelteKit framework\footnote{Available at \url{https://kit.svelte.dev/}.} is based on.
-The expected coverage on all files providing the mentioned functionality should exceed 80\%, which corresponds to the median coverage on projects at Google and is set to prevent an exponential increase in effort required to increase coverage further - see \autoref{Literature-Software-Testing}.
+The expected coverage on all files providing the mentioned functionality should exceed 80\%, which corresponds to the median coverage on projects at Google and is set to prevent an exponential increase in effort required to increase coverage further - see \Cref{Literature-Software-Testing}.
 
 \textbf{End to End UI Tests} verified the software from the viewpoint of a user.
 In contrast to the Unit Tests, that meant designing automated tests that covered interaction between multiple components and even multiple screens.
@@ -46,13 +48,13 @@ No automated coverage as a percentage was calculated for this group of automated
 Instead, all major paths through the software (use cases) were identified and captured in an automated test unless the return on the effort to do so would not be considered worth it.
 The reasoning was captured individually for each use case that was not covered.
 
-\textbf{Accessibility Tests} checked automatically for common errors with incorrectly implemented \gls{api}[s] - aiming for "technical accessibility" as mentioned in \autoref{Kinds-of-Accessibility}.
+\textbf{Accessibility Tests} checked automatically for common errors with incorrectly implemented \gls{api}[s] - aiming for "technical accessibility" as mentioned in \Cref{Kinds-of-Accessibility}.
 The chosen conformance target was "generally accepted and recommended" \gls{wcag} Level AA \parencite{WAI_Evaluation_Methodology_Note} and \gls{wcag} version 2.1 as it is the latest supported version within the \gls{wcagem} Report Tool as of the time of writing.
 To test for possible violations continually and in more scenarios than can be realistically achieved using one-off evaluation, checks were run on multiple screens in multiple states entered during the execution of Cypress tests.
-This was accomplished using the \gls{js} package cypress-axe that integrates aXe - an accessibility testing engine that powers Google's Lighthouse as mentioned in \autoref{Accessibility-Tools}.
+This was accomplished using the \gls{js} package cypress-axe that integrates aXe - an accessibility testing engine that powers Google's Lighthouse as mentioned in \Cref{Accessibility-Tools}.
 Considering the limited amount of time and resources, the human testing involved was limited to testing done by the author to produce the \gls{wcagem} report.
 
-The actual extent and output from all mentioned types of tests, including additional information, where relevant, was captured in \autoref{Evaluation-Tests}.
+The actual extent and output from all mentioned types of tests, including additional information, where relevant, was captured in \Cref{Evaluation-Tests}.
 
 \section{Comparative Study}
 
@@ -75,7 +77,7 @@ Since the only independent variable is the used software and there are two optio
     \item \textbf{Group B} using Existing Software.
 \end{itemize}
 
-Target users of the software are expected to come from different backgrounds corresponding to three target demographics mentioned in \autoref{Introduction}: \gls{cs} students, practitioners with/without formal education, and people interested, but not directly involved, in Computer Science.
+Target users of the software are expected to come from different backgrounds corresponding to three target demographics mentioned in \Cref{Introduction}: \gls{cs} students, practitioners with/without formal education, and people interested, but not directly involved, in Computer Science.
 Participants were recruited from the social circle of the author, and they were subsequently asked if they knew any other potentially interested participants.
 To control for external motivation and help with the recruitment, one half of participants within both groups were paid to participate for a rate of 10 euro per hour, as suggested by Prolific\footnote{Archived Prolific calculator: \url{https://web.archive.org/web/20221221162903/https://app.prolific.co/calculator.html}}.
 However, Prolific or a similar crowdsourcing method was not used to recruit participants.
@@ -198,6 +200,7 @@ Group B, on the other hand, considering the limitations of Existing Software, ha
 \end{figure}
 
 \subsection{Dependent Variables}
+\label{sec:methodology-dependent-variables}
 
 The following metrics were measured:
 
@@ -256,12 +259,13 @@ In the process, unstructured qualitative data were collected, including:
     \item various feedback.
 \end{itemize}
 
-While the comparison did not primarily concentrate on qualitative data, it was summarised in \autoref{Discussion-Qualitative}.
+While the comparison did not primarily concentrate on qualitative data, it was mentioned when discussing relevant outcomes or theories in \Cref{Discussion}.
 
 \subsection{Data Analysis}
+\label{sec:methodology-data-analysis}
 
 To decrease the likelihod of manual errors when evaluating \gls{sus} scores, the author obtained the SUS Guide \& Calculator Package\footnote{Available at: \url{https://measuringu.com/product/suspack/}.}.
-Based on \autoref{sec:sus-evaluation}, it was suggested at least 12 participants per group would need to participate in the study if the assumption is the effect size is relatively large.
+Based on \Cref{sec:sus-evaluation}, it was suggested at least 12 participants per group would need to participate in the study if the assumption is the effect size is relatively large.
 
 The measured efficiency is represented by calculating arithmetic mean of the measured times - individually for each task and added together, and the mean number of confusions.
 The subjective usability is analysed as a mean of \gls{sus} scores for each group.

@@ -1,6 +1,7 @@
 \chapter{Evaluation}
+\label{Evaluation}
 
-Closely following \autoref{chap:methodology}, the following chapter shows the extent and results of the performed tests.
+Closely following \Cref{Methodology}, the following chapter shows the extent and results of the performed tests.
 It starts with the functional tests checking for correctness, continues with the accessibility evaluation, and ends with the comparative usability study.
 
 \section{Functional Testing}
@@ -10,6 +11,7 @@ This section is divided into two parts reflecting significant differences in the
 Both sections outline the implementation, scope, and achieved results.
 
 \subsection{Unit Tests}
+\label{sec:evaluation-unit-tests}
 
 To cover all important reusable parts (units) of the software, all files within the $/src/lib$ directory\footnote{Available at \href{https://github.com/durasj/chipsandcode/tree/6decf05115ba1d4ca927de42f63c8431b1ac3124/src/lib}{github.com/durasj/chipsandcode/tree/6decf05/src/lib}.} had a corresponding $.test.ext$ file.
 The only expections were: Svelte components that would be better suited for Cypress Component Testing\footnote{Available at \url{https://docs.cypress.io/guides/component-testing/overview}.} - which did not yet have a stable support for Svelte; type definition files; and files that were tested indirectly.
@@ -162,8 +164,7 @@ Both tools reported no problems with the accessibility, as can be seen in Figure
     \label{fig:axe-report}
 \end{figure}
 
-Lastly, a manual \gls{wcag} testing by following the \gls{wcagem} report tool was performed.
-The report output from this tool can be found in Appendix~\ref{appendix:wcag-report}.
+Lastly, a manual \gls{wcag} testing by following the \gls{wcagem} report tool was performed\footnote{Report can be found at \url{https://github.com/durasj/master-thesis/blob/main/accessibility-report.pdf}}.
 The only potential problem that was identified during the testing involves dynamic updates to the \gls{ui}.
 The author was unable to determine whether the automatically updated pin \gls{ui} is usable when using assistive technology.
 For example, if the user changes some code in the editor and the list of pin updates, is this properly communicated using assistive technology?
@@ -249,12 +250,13 @@ Additionally, Figure~\ref{fig:plot-age} shows the age make-up of the groups and 
 \end{figure}
 
 \subsection{Efficiency}
+\label{sec:evaluation-efficiency}
 
 The first kind of collected data on efficiency consisted of time-related data like the time it took to prepare the tool for use and time spent on individual tasks.
 Figure~\ref{fig:plot-linear} shows a linear graph covering the mean of the time of mentioned steps between both groups.
 The same data can be seen as cumulative, which is represented by Figure~\ref{fig:plot-stacked-bar}.
 The total time spent on all parts was $512.42 \pm 190.01 s$ for Group A and $1,496.67 \pm 326.18 s$ for Group B ($\alpha=0.05$, $p<0.001$).
-Raw data collected during the study and that served as an input to mentioned figures and results are captured in Appendix~\ref{appendix:study-time-notes}.
+Raw data collected during the study and that served as an input to mentioned figures and results can be reviewed online\footnote{Available at \url{https://docs.google.com/spreadsheets/d/1CGNs1pCKvGJ4QuRDCExNc_3SZ4pgX3UlTXSKJU8hpa8}.}.
 
 The second kind of data on efficiency was the number of times the participant got confused, see Figure~\ref{fig:plot-boxplot}.
 For Group A, the mean was $0.58 \pm 0.42$, while for Group B it was $2.83 \pm 0.85$ ($\alpha=0.05$, $p<0.001$).
@@ -278,9 +280,10 @@ For Group A, the mean was $0.58 \pm 0.42$, while for Group B it was $2.83 \pm 0.
 \end{figure}
 
 \subsection{Questionnaire}
+\label{sec:evaluation-questionnaire}
 
 Collected responses had no coding errors, and internal reliability was acceptable at \emph{Cronbach Alpha} $\rho_T=0.708$ for Group A and $\rho_T=0.895$ for Group B.
-The mean \gls{sus} score for Group A was 86.67 (97th percentile), while for Group B it was 79.58 (76th percentile).
+The mean \gls{sus} score for Group A was 86.67 (97th percentile), while for Group B it was 79.58 (86th percentile).
 While that represents a difference of about seven points, it did not reach desired statistical significance ($\alpha=0.1$, $p=0.22$).
 Collected scores, statistical properties, and associated adjective and grade, can be seen in Figure~\ref{fig:plot-sus}.
 Placement on the percentile curve is captured in Figure~\ref{fig:plot-sus-percentile}.

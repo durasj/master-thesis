@@ -1,15 +1,38 @@
 \chapter{Introduction}
 \label{Introduction}
 
-\todo[inline]{Please skip for now. Taken from Thesis Proposal with only minor adjustments and notes. Should be two pages that would outline content of each chapter and end with a thesis statement.}
+Basic low-level computing concepts can be beneficial to people from all walks of life - from the general public curious about computers through professional software engineers without formal education to Computer Science students.
+In this case, low-level computing concepts mean simple logic gates, boolean arithmetics, computer architecture, or low-level programming.
+One of the most popular relevant learning materials is the Nand2Tetris course "taught at 400+ universities, high schools, and bootcamps" \parencite{nand2tetrisweb}.
+It introduces multiple computing concepts by building a virtual computer from individual logic gates to high-level programming language.
+However, like some other learning materials, it is supported by an older desktop learning tool with suspected usability and inclusivity limitations.
+This thesis aims to show that it is feasible to efficiently reimplement the functionality of a desktop tool for learning computing principles using web technologies while achieving efficiency, usability, and inclusivity improvements.
 
-Understanding low-level computing principles can be beneficial for a wide variety of people - from the general public interested in computers, through practising software engineers, to Computer Science students.
-Rather popular material is the open-source licensed Nand2Tetris "taught at 400+ universities, high schools, and bootcamps" that explains how to build a computer from individual logic gates to high-level programming language \parencite{nand2tetrisweb}.
-The material is accompanied by a desktop software that is hard to access or completely inaccessible from a new class of devices unsuited for desktop Java applications: Chromebooks that are seeing massive growth and now account for the majority of the US K12 market \parencite{Boreham_2019} \parencite{IDC_2021}, or mobile devices that account for 56\% of web traffic, up from only 6\% in 2011 \parencite{StatCounter_2021}.
-The recently created web-based alternative, WepSIM, is showing promising results but takes a more complex look focusing on the CPU and instruction processing \parencite{garcia2019wepsim}.
+% Literature Review - what is HCI and how to improve it, motivation and gaps
+The thesis is divided into several chapters.
+\Cref{Literature-Review} reviews the literature and starts by exploring the relevant literature on \gls{hci} ergonomics concepts, how they can be implemented, and especially how the implemented concepts can be evaluated.
+It continues by taking a look at the relevance of \glspl{mooc}, common hurdles of online classes, and existing software used to learn low-level computing concepts.
+Then, it looks for patterns and trends of the types of devices that are currently used across the world and by learners in particular.
+Finally, it ends by covering \gls{cs} and software engineering concepts like the production of learning material, code editing, parsing, legal aspects of software and learning materials, and design, development, and testing of \gls{oss} software.
+% /Literature Review
 
-Common problems with Massive Open Online Courses (MOOCs) leading to a high rate of dropouts include lack of time, problems adopting new systems, and bad past experience with technical problems on MOOC platforms \parencite{onah2014dropout}.
-The use of MOOCs for software engineering education within higher education is argued to broaden student knowledge and is integrated by some universities in their courses and programmes \parencite{stikkolorum2014mooc}. However, MOOCs are also said to require significant time to both create and integrate \parencite{stikkolorum2014mooc}.
+% Methodology
+After the relevant concepts and opportunities for improvements are covered, \Cref{Methodology} introduces the methodology used to design and evaluate a new web-based learning tool.
+The evaluation first covers functional testing - whether the functionality works and can do what the desktop tool can do.
+Then, the methodology introduces a controlled comparative study that involves two versions of the same content that differ only in the used software - one using the existing software and the other the new software.
+The methodology explains the variables in the comparative study and selected metrics used to evaluate the goal of efficiency and usability improvements.
+% /Methodology
 
-This thesis proposes a new web platform for learning computing principles involving logic gates via a basic individually usable tool integrated into example content.
-% Can the new web platform for learning computing principles improve student task success rate compared to commonly used desktop software like that of Nand2Tetris?
+% Design and Implementation, Evaluation
+There are two distinctive phases of the primary research: design and implementation of the new learning tool and evaluation that verifies the results of the first phase.
+\Cref{Design-Implementation} covers the first phase of the research - design and implementation.
+It describes the feasibility part of the research statement, focusing on the differences in the approach and its effects on the mentioned goals and how it was possible to address them efficiently through technology.
+\Cref{Evaluation} covers the second phase of the research - evaluation.
+It presents the scope and results of the functional testing, the outcome of the accessibility evaluation, and the analysis of the data points collected from the comparative study.
+% /Design and Implementation, Evaluation
+
+% Discussion and Results
+Finally, the achieved results are discussed in \Cref{Discussion}.
+The discussion reflects on the process of the design and implementation in the context of the specified goals by commenting to what extent the goals were achieved and what are the practical implications.
+The key points are summarised in \Cref{Conclusions}.
+% /Discussion and Results

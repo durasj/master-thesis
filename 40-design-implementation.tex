@@ -1,4 +1,5 @@
 \chapter{Design and Implementation}
+\label{Design-Implementation}
 
 The following chapter goes through the most important design considerations and their implementation.
 Where appropriate, it includes a comparison to Existing Software.
@@ -6,6 +7,7 @@ Following a top-down approach, it starts with the overall architecture and the b
 The source code is hosted at Github\footnote{Up-to-date state: \url{https://github.com/durasj/chipsandcode/}. At the time of writing: \url{https://github.com/durasj/chipsandcode/tree/6decf0}.} - referred to as Repository from now on.
 
 \section{Overall Architecture}
+\label{sec:architecture}
 
 As can be seen in Figure~\ref{fig:design-architecture}, Proposed Software is primarily a client-side web application.
 This decision was made for two reasons:
@@ -51,16 +53,17 @@ This section covers key \gls{ui} aspects.
 It always starts with design decisions from the user's perspective before moving on to an explanation of how technology enabled that.
 
 \subsection{Interactions}
+\label{sec:ui-interactions}
 
-In line with the premise the time and difficulty of using a learning tool is important (see \autoref{sec:software-design}), Proposed Software minimises the friction when the user transitions from learning content to learning tool and shortens the cycle of "trial and error".
-Figure~\ref{fig:design-hdl-steps} shows a comparison between Existing Software (left) and Proposed Software (right)\footnote{See video for context: \url{https://youtu.be/mnSuqmvn4hg}.} in terms of steps needed to iterate on an assignment to implement the chip's \gls{hdl}.
+In line with the premise the time and difficulty of using a learning tool is important (see \Cref{sec:software-design}), Proposed Software minimises the friction when the user transitions from learning content to learning tool and shortens the cycle of "trial and error".
+Figure~\ref{fig:design-hdl-steps} shows a comparison between Existing Software (left) and Proposed Software (right) in terms of steps needed to iterate on an assignment to implement the chip's \gls{hdl}\footnote{See video for context: \url{https://youtu.be/mnSuqmvn4hg}.}.
 As we can see, with Proposed Software, the flow is linear and with only simple steps like "scroll down" that are natural.
 This is in contrast to Existing Software, which has a higher number of steps that can introduce opportunities for confusion and mistakes.
 Some of the simplification comes from the web, as the learning tool can be easily embedded within the content.
 On top of that, there are two other relevant features:
 
 \begin{itemize}
-    \item \textbf{Code Editor Integration}: The tool has a built-in code editor so that the learner does not have to switch context. Specifically, it integrates Monaco Editor\footnote{Available at \url{https://microsoft.github.io/monaco-editor/}.}, which is the same library underneath the most popular \gls{ide} (see \autoref{sec:text-code}). It is additionally configured with custom themes and languages to fit within the content and provide syntax highlighting\footnote{See \url{https://github.com/durasj/chipsandcode/blob/6decf0/src/lib/editor/index.ts}.}. Moreover, one more feature that is integrated right into the tool is a visual diff of the output. As can be seen in Figure~\ref{fig:design-diff}, while Existing Software requires the learner to leave the \gls{ui} and use a \gls{cli} utility with a confusing output, Proposed Software provides a clear indication of all rows and even individual values that are wrong.
+    \item \textbf{Code Editor Integration}: The tool has a built-in code editor so that the learner does not have to switch context. Specifically, it integrates Monaco Editor\footnote{Available at \url{https://microsoft.github.io/monaco-editor/}.}, which is the same library underneath the most popular \gls{ide} (see \Cref{sec:text-code}). It is additionally configured with custom themes and languages to fit within the content and provide syntax highlighting\footnote{See \url{https://github.com/durasj/chipsandcode/blob/6decf0/src/lib/editor/index.ts}.}. Moreover, one more feature that is integrated right into the tool is a visual diff of the output. As can be seen in Figure~\ref{fig:design-diff}, while Existing Software requires the learner to leave the \gls{ui} and use a \gls{cli} utility with a confusing output, Proposed Software provides a clear indication of all rows and even individual values that are wrong.
     \item \textbf{Automatisation}: If there is no benefit in having the user perform a manual action, the interface reacts in real-time to lower friction. In this case, it means on any change in \gls{hdl}, \gls{tst}, output, or values of input pins, the interface recalculates the outputs. Also, all output comparisons are evaluated at once so that the user has more information to base their decision on.
 \end{itemize}
 
@@ -79,6 +82,7 @@ On top of that, there are two other relevant features:
 \end{figure}
 
 \subsection{Error Handling}
+\label{sec:ui-error-handling}
 
 Since it is assumed user errors are likely, especially when introducing new concepts, with Proposed Software, the intention is to prevent user errors when it is possible and try to make them helpful when not.
 This is achieved by combining:
@@ -111,7 +115,7 @@ This is achieved by combining:
 
 \section{Branding and Presentation}
 
-In line with the advice explored in \autoref{sec:oss-essential-steps}, the project is available under the name Chips and Code at \href{chipsandcode.com}{https://chipsandcode.com}.
+In line with the advice explored in \Cref{sec:oss-essential-steps}, the project is available under the name Chips and Code at \href{chipsandcode.com}{https://chipsandcode.com}.
 It makes use of a consistent brand identity - logo, colours (accessible combination of violet and orange), and fonts.
 There are two different mission statements depending on the target audience:
 
@@ -133,7 +137,7 @@ This brings benefits not only for less equipped users (e.g. from developing coun
 There are several technologies that enabled this:
 
 \begin{itemize}
-    \item \textbf{Svelte and Tailwind}: Although each has a different responsibility - the former is a front-end framework\footnote{Available at: \url{https://svelte.dev}.} and the latter a \gls{css} framework\footnote{Available at: \url{https://tailwindcss.com}}, both share the same philosophy - no overhead of the library. Svelte achieves this by generating tailor-mode optimised code during the build instead of using a run-time rendering library. Tailwind, on the other hand, uses atomic styles, of which only a small subset is often reused throughout the app, and the rest is removed during the build.
+    \item \textbf{Svelte and Tailwind}: Although each has a different responsibility - the former is a front-end framework\footnote{Available at: \url{https://svelte.dev}.} and the latter a \gls{css} framework\footnote{Available at: \url{https://tailwindcss.com}}, both share the same philosophy - no overhead of the library. Svelte achieves this by generating tailor-made optimised code during the build instead of using a run-time rendering library. Tailwind uses atomic styles - a subset of available styles is reused throughout the app, and the rest is removed during the build.
     \item \textbf{Tree Shaking, Chunking, Prerendering}: All imports are automatically analysed by Vite\footnote{See \url{https://vitejs.dev/guide/features.html}.}, unused parts of the code are removed (tree shaking), and the rest is split into chunks for faster initial loads so that larger features like Monaco Editor do not block the initial load. Prerendering done at build time also speeds up the initial load as the page loads instantly as a simple \gls{html} and then is hydrated via \gls{js}.
     \item \textbf{Small Assets}: Any hard-earned efficiency gains could be easily ruined with unoptimised multimedia assets like images. Therefore, whenever possible, Proposed Software uses vector graphics (SVGs), and when not, modern efficient AVIF or WEBP image formats with JPEF fallback using the picture element\footnote{See \url{https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture}.}. This is done automatically and includes resizing and low-quality variants used for the initial load\footnote{Using $svelte-img$, available at: \url{https://github.com/zerodevx/svelte-img}.}. Proposed Software also does not use custom fonts but instead relies on a system font stack\footnote{See \url{https://bitsofco.de/the-new-system-font-stack/}.}.
     \item \textbf{Preload}: Apart from the pre-caching done using the previously mentioned service worker, all crucial modules are marked for preload\footnote{See \url{https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/modulepreload}.} so that the browser can process them ahead of time in parallel. Additionally, anytime the user hovers or starts a touch gesture on an internal link, it is preloaded with high priority in a split second before the tap/click actually happens\footnote{See \url{https://kit.svelte.dev/docs/link-options}.}.
@@ -174,8 +178,8 @@ The time varied between 0.09 ms on a high-end desktop with i7 13700 and 0.78 ms 
 
 \section{Security}
 
-Even though security was not the highest priority for Proposed Software, it still implemented essential security measures.
-Deployment-level features include DNSSEC, HTTPS, or mandatory GPG-signed commits that prevent automated deployment of spoofed commits from the main branch.
+Even though security was not the highest priority for Proposed Software, it includes essential security measures.
+Deployment-level features include DNSSEC, HTTPS, and mandatory GPG-signed commits that prevent automated deployment of spoofed commits from the main branch.
 As for Denial of Service attacks, Proposed Software relies primarily on Cloudflare Pages that offer unlimited free bandwidth and requests.
 As far as the optional cloud functionality goes, in the worst-case scenario, it would stop working for the day after reaching 100k requests.
 
@@ -216,7 +220,7 @@ Figure~\ref{fig:design-screenshot-ide-mobile} shows an example of the Hardware \
 \end{figure}
 
 The high market share of modern web browsers and the \gls{ui} responsivity mean Proposed Software should be usable by the vast majority of internet users - excluding only users of unsupported browsers like Internet Explorer that now account for $<1\%$\footnote{See \url{https://gs.statcounter.com}.}.
-Compared to that, based on the statistics gathered in \autoref{sec:device-types}, Existing Software would be globally accessible only from 44\% of devices used to browse the web.
+Compared to that, based on the statistics gathered in \Cref{sec:device-types}, Existing Software would be globally accessible only from 44\% of devices used to browse the web.
 However, if we consider only users that rely on smartphones, within developing countries, this means one-fourth of the population is unable to access Existing Software.
 
 \begin{figure}[H]
@@ -230,7 +234,7 @@ However, if we consider only users that rely on smartphones, within developing c
 
 Proposed Software includes a way to produce learning content.
 This is done simply using version-controlled Markdown files that can be seen in Repository\footnote{See \url{https://github.com/durasj/chipsandcode/tree/6decf0/src/routes/learn/hardware/boolean-logic} for examples.}.
-Based on the review done in \autoref{sec:text-code}, Markdown documents should be easier to write while still preserving the advantages of the plaintext input format.
+Based on the review done in \Cref{sec:text-code}, Markdown documents should be easier to write while still preserving the advantages of the plaintext input format.
 Since Markdown does not allow for any custom styling, all of the content is presented consistently and can be used long-term in different forms.
 Moreover, the Markdown content implementation still allows for powerful additions, namely:
 
@@ -248,15 +252,12 @@ These features can be seen in Markdwon example in Figure~\ref{fig:design-markdow
 \begin{minted}[breaklines=true, fontsize=\small]{markdown}
 ## Example: Building a Nand Gate
 
-One way to define a _Not_ And is `Nand(a, b) = Not(And(a, b))`.
+Let me show you a _Not_ And: `Nand(a, b) = Not(And(a, b))`.
 Just some random math expression: $f(x, y)$.
 And an embed for a good measure:
 
 {% EmbeddedHardwareIDE id="nnDG6JRQjL0aNVb7AJHnmZrv02pHIINF" /%}
 \end{minted}
-
-
-
     \caption{Example of learning content written in Markdown.}
     \label{fig:design-markdown-example}
 \end{figure}
