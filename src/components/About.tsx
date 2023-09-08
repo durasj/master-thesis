@@ -67,10 +67,10 @@ export function About() {
                 target="_blank"
                 className="underline"
               >
-                one fourth
+                one-fourth
               </a>
               {' '}
-              of people from developing countries relies on smartphones). Chips
+              of people from developing countries rely on smartphones). Chips
               and Code aims to reimplement the same functionality using the
               modern web with an improved user experience.
             </p>

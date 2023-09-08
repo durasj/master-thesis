@@ -1,60 +1,62 @@
 \chapter{Discussion}
 \label{Discussion}
 
-The research statement claims it is feasible to reimplement the functionality of a desktop tool for learning computing principles using web technologies while achieving efficiency, usability, and inclusivity improvements.
-The following sections first cover the implementation feasibility - the \textit{web} part, continue with the observed improvements, and finish with the limitations and ideas for further research.
+This chapter first addresses most of the RQ1, specifically if it is feasible to efficiently reimplement the functionality of the desktop tool for learning computing principles by using web technologies.
+Then, it continues by addressing RQ2 on the usability and efficiency improvements before going back to device support improvements covered under RQ1.
+It finishes with the limitations and ideas for further research.
 
 \section{Feasibility}
 
-As can be seen in \Cref{Design-Implementation}, it was not only possible to reimplement a desktop learning tool using web technologies, it was also possible to do so relatively efficiently and while mitigating the design disadvantages of the web.
+As can be seen in \Cref{Design-Implementation}, it was not only possible to reimplement a desktop learning tool using web technologies, but it was also possible to do so relatively efficiently while mitigating the design disadvantages of the web.
 
-Despite the fact the implementation involved topics that one may not expect to be well supported on the web, e.g., parsing and code editing, it was shown there are high-quality \gls{oss} libraries that can support an efficient web implementation.
+Although the implementation involved topics that one may not expect to be well supported on the web, e.g., parsing and code editing, it was shown that there are high-quality \gls{oss} libraries that can support an efficient web implementation.
 Notably, the library behind the most popular \gls{ide} is available as a web library{\footnote{Monaco Editor, see \Cref{sec:ui-interactions}, powering the popular \gls{ide} Visual Studio Code, see \Cref{sec:writing-code}.} under a permissive \gls{oss} license and was made part of the software with relative ease.
-Similarly, it was possible to create two parsers - for the \gls{hdl} and \gls{tst}\footnote{See Appendix~\ref{appendix:hdl-railroad}, \ref{appendix:hdl-grammar}, \ref{appendix:tst-railroad}, and \ref{appendix:tst-grammar}.} - relatively quickly thanks to an easy-to-use Earley algorithm parser generator and the integrated lexer\footnote{Nearley and moo, respectively, see \Cref{sec:ui-error-handling}.}.
+Similarly, it was possible to create two parsers --- for the \gls{hdl} and \gls{tst}\footnote{See Appendix~\ref{appendix:hdl-railroad}, \ref{appendix:hdl-grammar}, \ref{appendix:tst-railroad}, and \ref{appendix:tst-grammar}.} --- relatively quickly thanks to an easy-to-use Earley algorithm parser generator and the integrated lexer\footnote{Nearley and moo, respectively, see \Cref{sec:ui-error-handling}.}.
 The ability to perform the same selected functionality the existing desktop software can was confirmed using a range of automated tests, including unit tests that show all built-in and Project 1 files from the existing software can be parsed and interpreted\footnote{\gls{hdl} and \gls{tst} files, see \Cref{sec:evaluation-unit-tests}.}.
 While it is impossible to say others (re)implementing learning tools on the web would find the ecosystem similarly mature, this work shows it could be worthwhile to evaluate that option.
 
 A reasonable person might expect that web software, compared to desktop, requires an internet connection and cannot be integrated into the \gls{os} the way desktop applications can.
 This thesis shows it is possible to use modern web \glspl{api} to enable use with limited or even no internet connection and install the application like a desktop one\footnote{Using service workers and \gls{pwa} technology, see \Cref{sec:architecture}.}.
-Similarly, some might argue a web application might be dependent on servers and harder to reproduce.
+Similarly, some might argue that a web application is dependent on servers and harder to reproduce.
 The implemented software is a client-side web application and does not rely on the cloud, which makes it easier to reproduce and enables bundling as a fully functional offline desktop or mobile application\footnote{Using technology like Electron and Capacitor, see \Cref{sec:architecture}.}.
-This thesis shows common drawbacks associated with web applications can be solved or mitigated with architectural decisions and modern \glspl{api}.
+Moreover, we theorise that web-based learning tools could be easier to incorporate into various learning materials using embedding or linking.
+This thesis shows that common drawbacks associated with web applications can be solved or mitigated with architectural decisions and modern \glspl{api}.
 
-That being said, it was not possible to implement all the functionality offered by the existing learning tool in the allocated time.
-That means there is a possibility some functionality could be harder to cover using the web.
-However, the author believes all of the observed features are possible to implement on the web.
+It was not possible to implement all the functionality offered by the existing learning tool in the allocated time.
+This means there is a possibility some functionality could be harder to cover using the web.
+However, the author believes all observed features can be implemented on the web.
 Additionally, it should be feasible to do so without complicating the \gls{ui} as it can adapt to the complexity of the solved problems by "growing" with the learner's knowledge on the topic and using "sane defaults".
 
 \section{Improvements}
 
-The presented results show tangible improvements compared to the existing desktop software regarding efficiency, usability, and inclusivity.
+The presented results show tangible improvements compared to the existing desktop software regarding efficiency, usability, and device support.
 
 As was shown in \Cref{sec:evaluation-efficiency}, participants using the proposed web implementation embedded within the learning content were able to complete the assigned tasks in $1/3$ of the time ($512 \pm190 s$ vs $1497 \pm326 s$, $\alpha=0.05$, $p<0.001$) it took participants using the desktop software.
-It is assume this effect was partially caused by the overhead of having to use three different windows: a browser with the learning content, a text editor for the assignment code, and the actual learning tool.
+It is assumed this effect was partially caused by the overhead of using three different windows: a browser with the learning content, a text editor for the assignment code, and the actual learning tool.
 Additionally, this is also explained by the mean number of times participants from each group got confused\footnote{See \Cref{sec:methodology-dependent-variables} for the definition.}, which was $0.58 \pm 0.42$ for the group using the proposed software and $2.83 \pm 0.85$ for the group using the existing desktop tool ($\alpha=0.05$, $p<0.001$).
 The first set of commonly experienced problems was the inability to run the software due to a missing or incorrect version of Java or the launching of the application using a way unsuitable for their \gls{os}.
-The second set of commonly experienced problems was connected to the received errors - participants were often confused by them or could not see them at all since the \gls{ui} would not scale with the window size.
-The third set of commonly experienced problems related to the actions available in the user interface - participants were not sure which button to use or how to proceed.
-Importantly, this was despite the fact the participants saw a video showing how to install and use the software.
-These problems were nonexistent with the proposed software, and the only kind of problems experienced was confusion around the syntax.
+The second set of commonly experienced problems was connected to the received errors: participants were often confused by them or could not see them at all since the \gls{ui} would not scale with the window size.
+The third set of commonly experienced problems related to the actions available in the user interface --- participants were unsure which button to use or how to proceed.
+Importantly, this was despite the participants seeing a video showing how to install and use the software.
+These problems were non-existent with the proposed software; the only problem experienced was confusion around the syntax.
 This finding suggests it is possible to achieve substantial efficiency gains by reimagining existing desktop learning tools as embedded web learning tools focused on usability.
-We could theorise that less time needed to participate and fewer technical challenges would positively impact the \gls{mooc} dropout rates\footnote{Suggested by research, see \Cref{sec:learning-state}.}.
+We could theorise that less time needed to participate, and fewer technical challenges would positively impact the \gls{mooc} dropout rates\footnote{Suggested by research, see \Cref{sec:learning-state}.}.
 However, further research is needed to confirm that efficiency improvement is reproducible with different learning tools from different fields of study.
-This thesis was not able to explore to what extent this would have an actual impact on the success rate or dropout rates.
+This thesis could not explore to what extent this would impact the success rate or dropout rates.
 
 The second metric used to gauge the improvement was the \gls{sus} score mentioned in \Cref{sec:evaluation-questionnaire}.
-While there was a difference of 7 points in favour of the new software (86.67 - 97th percentile vs 79.58 - 86th percentile), the result was not statistically significant ($\alpha=0.1$, $p=0.22$).
+While there was a difference of 7 points in favour of the new software (86.67 points --- 97th percentile vs 79.58 points --- 86th percentile), the result was not statistically significant ($\alpha=0.1$, $p=0.22$).
 This was likely due to the relatively small effect size and small sample size ($n=12$ per group).
 The suggested sample size\footnote{Using SUS Guide \& Calculator Package, see \Cref{sec:methodology-data-analysis}.} at this effect size to produce statistically significant data is $n=45$ per group.
-The effect size grew considerably once the same participant was asked to try the other software - likely because of the anchoring.
+The effect size grew considerably once the same participant was asked to try the other software --- likely because of the anchoring.
 However, this data was not presented due to the likely bias, as many participants recognised which software was created by the author once they saw both.
-Still, it is possible a within-subject design would produce statistically significant data faster provided the bias could be prevented - e.g. by using a blind data collector.
+Still, it is possible a within-subject design would produce statistically significant data faster provided the bias could be prevented --- e.g. by using a blind data collector.
 
-The data suggest there is a relation between these two metrics - the time on task and the \gls{sus} score - at $r=-0.28$ and $r=-0.23$ for the group using the new software and the existing software, respectively.
+The data suggest there is a relation between these two metrics --- the time on task and the \gls{sus} score --- at $r=-0.28$ and $r=-0.23$ for the group using the new software and the existing software, respectively.
 However, the combination of the small effect size and a small sample size means the likelihood that the null hypothesis is true is high, with $p > 0.35$ for both groups.
 More research is needed to confirm this relation holds on a larger sample size and on different works.
 
-Existing research suggests a pattern of increased reliance on devices that do not support desktop applications - particularly among the 18-29 age group\footnote{See \Cref{sec:device-types}.}.
+Existing research suggests a pattern of increased reliance on devices that do not support desktop applications --- particularly among the 18--29 age group\footnote{See \Cref{sec:device-types}.}.
 This pattern, combined with the increasing mobile device share on the internet traffic and a new generation of learners used to Chromebooks and tablets, suggests learners could be underserved with existing desktop learning tools.
 The problem of reliance on smart devices for learning is particularly apparent in developing countries where about 34\% of households have no access to a desktop, laptop, or tablet device, and one-fourth of the population relies on smartphones as the only way to connect to the internet\footnote{See \Cref{sec:device-types}.}.
 This problem was further emphasised during the COVID pandemic when researchers called for the content to be available from a wide range of devices\footnote{See \Cref{sec:learning-state}.}.
@@ -65,27 +67,39 @@ However, in developed countries, this may not have a very strong practical impac
 
 As far as qualitative data go, learners who tried both voiced a slight or strong preference for the web-based software.
 They praised the integration within the web page, the integration of the editor, and the automatic execution of tests.
-Many noted they felt more efficient, and some noted they would not be willing to install Java if it was not necessary - particularly those on Linux where it was necessary to change the configuration.
+Many noted they felt more efficient, and some noted they would not be willing to install Java if it was not necessary --- particularly those on Linux where it was necessary to change the configuration.
 Notably, there were three participants who were unable to finish their session: one did not have administrative privileges required to instadll Java, one did not feel comfortable installing software from the internet on the given device, and one could not see the error output as their screen was not large enough and the existing software does not scale with the window size.
 However, it is unclear to what extent the opinions were biased as many of the learners were able to guess which software the author moderating the study wrote once they saw both, and it is assumed learners from developed countries would find a way to use the existing software if they were strongly motivated.
 
-\section{Limitations and Further Research}
+\section{Limitations and Further Work}
 
-This thesis took \textit{one specific} desktop learning tool and presented it is feasible to, and can even bring efficiency, usability, and inclusivity benefits, reimplement it using modern web technologies.
-As such, apart from the inclusivity benefits that are given, it is questionable to what extent the same results could be replicated on different learning tools from different fields of study.
-Also, it measured the results only on a subset of the functionality with a relatively small sample size of 24 participants during only one session.
+This thesis took one specific desktop learning tool.
+As such, apart from the certain device support benefits, it is questionable to what extent the same results could be replicated on different learning tools from different fields of study.
+Also, it measured the results only on a subset of the functionality and during a session long only one hour.
+While the observed efficiency improvements were statistically significant and with a notable effect size, the practical significance will depend on the context.
+The results represent a situation where the learner must pick up a new learning tool.
+Important metrics like the success rate or the dropout rate will likely depend heavily on the time limits --- be it the time dedicated to the exercise in the classroom or the free time the learner is willing to spend at home before they give up or have to move on.
+This thesis did not cover performance improvements connected with a more comprehensive long-term use.
+While we could theorise some of the presented concepts likely apply the long-term use as well, it is likely the effect size would get smaller over time.
 
 Moreover, there were several methodology limitations.
 Firstly, sampling bias, as participants came primarily from the extended social circle of the author and only included participants who agreed to participate.
-Secondly, moderator bias, as the author was the moderator of the study, might have influenced the study despite the best efforts not to do so.
-Lastly, the group using the existing software had to create the starting files themselves.
-While we could argue this is an expected part of the work with desktop tools, we could also argue this could have been simplified, and the participants could have been able to download precreated files.
-This was not possible to do with the design of this study that featured the original bundle of the existing software and the chosen simple assignments that are not part of the bundle.
+Secondly, moderator bias, as the author was the moderator of the study and might have influenced the study despite the best efforts not to do so.
+Lastly, the group using the existing software had to create the starting files themselves, which could have led to an unrealistic overhead.
+While we could argue that this is an expected part of the work with desktop tools, we could also argue that this could have been simplified, and the participants could have been able to download pre-created files.
+Using existing files was not possible in this case as the study featured the original bundle of the existing software and the chosen simple assignments which were not part of the original bundle.
+A larger comparative study with participants available for a longer period of time could use the bundled set of assignments.
 
 Considering the limitations and unexplored paths of the thesis, there are multiple exciting possibilities for further work:
 
 \begin{itemize}
-    \item \textbf{Academic}: Larger sample size - suggested $n=45$ per group to achieve statistical significance on all data points. Change of the methodology to within-subject with a blind study moderator. Reproduction of the results with different learning tools from different fields of study.
+    \item \textbf{Academic}:
+    \begin{itemize}
+        \item Larger sample size --- suggested $n=45$ per group to achieve statistical significance on all data points.
+        \item Long-term study observing performance over several sessions.
+        \item Change of the methodology to within-subject with a blind study moderator.
+        \item Reproduction of the results with different learning tools from different fields of study.
+    \end{itemize}
     \item \textbf{Practical}: Finish the implementation of all functionality needed to take the whole Nand2Tetris course while using the web implementation.
-    \item \textbf{For Wider Public}: Adapt or introduce content that would use the existing technologies but would be easier to consume by the public\footnote{Akin to how \url{https://www.elementsofai.com} introduces the basics of AI.}.
+    \item \textbf{For the Wider Public}: Adapt or introduce content that would use the existing technologies but would be easier to consume by the public\footnote{Akin to how \url{https://www.elementsofai.com} introduces the basics of AI.}.
 \end{itemize}

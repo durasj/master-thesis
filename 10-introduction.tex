@@ -1,38 +1,90 @@
 \chapter{Introduction}
 \label{Introduction}
 
-Basic low-level computing concepts can be beneficial to people from all walks of life - from the general public curious about computers through professional software engineers without formal education to Computer Science students.
-In this case, low-level computing concepts mean simple logic gates, boolean arithmetics, computer architecture, or low-level programming.
-One of the most popular relevant learning materials is the Nand2Tetris course "taught at 400+ universities, high schools, and bootcamps" \parencite{nand2tetrisweb}.
-It introduces multiple computing concepts by building a virtual computer from individual logic gates to high-level programming language.
-However, like some other learning materials, it is supported by an older desktop learning tool with suspected usability and inclusivity limitations.
-This thesis aims to show that it is feasible to efficiently reimplement the functionality of a desktop tool for learning computing principles using web technologies while achieving efficiency, usability, and inclusivity improvements.
+\section{Overview and Motivation}
+
+Software usability is a well-researched important part of software quality \parencite{Almazroi2021}.
+Notably, improvements in the area can bring a high, double-digit \gls{roi} \parencite{Nielsen_2008}.
+The \gls{roi} is smaller if the starting point is better.
+Data from \textcite{Nielsen_2008} suggest newer creations are usually better positioned than older ones.
+Therefore, it appears the key is to identify software that has poor usability but is still used very often.
+
+One of the most popular learning materials on low-level computer principles is the Nand2Tetris course, "taught at 400+ universities, high schools, and bootcamps" \parencite{nand2tetrisweb}.
+It introduces multiple computing concepts by building a virtual computer from individual logic gates to a high-level programming language.
+These concepts can be of interest to people from all walks of life:
+
+\begin{itemize}
+    \item From \gls{cs} students covering the relevant undergraduate curriculum.
+    \item Through \gls{ict} professionals with or without formal education, who can use the knowledge for a deeper understanding of the craft.
+    \item To the general public who would like to understand the mysterious devices they rely on daily.
+\end{itemize}
+
+However, like many other learning materials, Nand2Tetris is supported by an older desktop learning tool with suspected usability and device support limitations.
+One of the obvious limitations of older desktop software is that it could not count with the diversity of devices used in today's age.
+With the increasingly common smartphones, tablets, or devices like Chromebooks that do not allow running arbitrary desktop applications, this represents a problem for a growing part of learners.
+Even worse, households in developing countries often have no devices capable of running desktop applications.
+
+\section{Research Questions and Objectives}
+
+Using the Nand2Tetris desktop tool for learning computing principles as an example, this thesis seeks to discover:
+
+\begin{itemize}
+    \item RQ1: Is it feasible to efficiently reimplement the functionality of a desktop learning tool using web technologies, achieving better device support?
+    \item RQ2: To what extent is it possible to improve usability when reimagining a desktop learning tool as a web application?
+\end{itemize}
+
+In order to answer these research questions, this thesis has the following objectives:
+
+\begin{enumerate}
+    \item Implementation of a reimagined web version of the Nand2Tetris Hardware Simulator with the focus on:
+    \begin{itemize}
+        \item Compatibility with the original software.
+        \item Usability --- particularly task efficiency.
+        \item Broad device support.
+    \end{itemize}
+    \item Collection of quantitative and accidental qualitative data on:
+    \begin{itemize}
+        \item Objective usability like the time on task or the number of errors.
+        \item Subjective usability in the form of a questionnaire answers.
+    \end{itemize}
+    \item Analysis of the collected data, comparing the data between the old and proposed software and looking for patterns.
+\end{enumerate}
+
+\section{Research Contributions}
+
+Considering the objectives of this thesis represent a combination of software engineering and usability testing outputs, we can group the contributions of this thesis into two overlapping groups:
+
+\begin{itemize}
+    \item \textbf{Practical}: Working alternative to the Nand2Tetris Hardware Simulator accessible from the web for future learners who cannot or do not prefer running the original software.
+    \item \textbf{Academic}: Data on the possible usability (especially efficiency) and device support gains to support decision-making. Solution design in the form of this thesis and \gls{oss} source code to help reproduce the results.
+\end{itemize}
+
+\section{Thesis Structure}
 
 % Literature Review - what is HCI and how to improve it, motivation and gaps
 The thesis is divided into several chapters.
 \Cref{Literature-Review} reviews the literature and starts by exploring the relevant literature on \gls{hci} ergonomics concepts, how they can be implemented, and especially how the implemented concepts can be evaluated.
-It continues by taking a look at the relevance of \glspl{mooc}, common hurdles of online classes, and existing software used to learn low-level computing concepts.
-Then, it looks for patterns and trends of the types of devices that are currently used across the world and by learners in particular.
+It examines the relevance of \glspl{mooc}, common hurdles of online classes, and existing software used to learn low-level computing concepts.
+Then, it looks for patterns and trends of the types of devices currently used worldwide and by learners in particular.
 Finally, it ends by covering \gls{cs} and software engineering concepts like the production of learning material, code editing, parsing, legal aspects of software and learning materials, and design, development, and testing of \gls{oss} software.
 % /Literature Review
 
 % Methodology
-After the relevant concepts and opportunities for improvements are covered, \Cref{Methodology} introduces the methodology used to design and evaluate a new web-based learning tool.
-The evaluation first covers functional testing - whether the functionality works and can do what the desktop tool can do.
-Then, the methodology introduces a controlled comparative study that involves two versions of the same content that differ only in the used software - one using the existing software and the other the new software.
-The methodology explains the variables in the comparative study and selected metrics used to evaluate the goal of efficiency and usability improvements.
+Once the relevant concepts and improvement opportunities are covered, \Cref{Methodology} introduces the methodology used for designing and evaluating the new web-based learning tool.
+The evaluation methodology first covers functional testing --- whether the functionality works and can do what the desktop tool can do.
+Then, the methodology introduces a controlled comparative study that involves two versions of the same content that differ only in the used software --- one using the existing software and the other the new software.
 % /Methodology
 
 % Design and Implementation, Evaluation
 There are two distinctive phases of the primary research: design and implementation of the new learning tool and evaluation that verifies the results of the first phase.
-\Cref{Design-Implementation} covers the first phase of the research - design and implementation.
-It describes the feasibility part of the research statement, focusing on the differences in the approach and its effects on the mentioned goals and how it was possible to address them efficiently through technology.
-\Cref{Evaluation} covers the second phase of the research - evaluation.
+\Cref{Design-Implementation} covers the first phase of the research --- design and implementation.
+It describes the feasibility part of the research statement, focusing on the differences in the approach, its effects on the mentioned goals, and how it was possible to address them efficiently through technology.
+\Cref{Evaluation} covers the second phase of the research --- evaluation.
 It presents the scope and results of the functional testing, the outcome of the accessibility evaluation, and the analysis of the data points collected from the comparative study.
 % /Design and Implementation, Evaluation
 
 % Discussion and Results
 Finally, the achieved results are discussed in \Cref{Discussion}.
-The discussion reflects on the process of the design and implementation in the context of the specified goals by commenting to what extent the goals were achieved and what are the practical implications.
-The key points are summarised in \Cref{Conclusions}.
+The discussion reflects on the design and implementation process in the context of the specified questions and goals by commenting on the extent to which the goals were achieved the practical implications.
+The key results are ultimately summarised in \Cref{Conclusions}.
 % /Discussion and Results

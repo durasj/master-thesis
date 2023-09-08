@@ -1,7 +1,7 @@
 \section{Text and Code}
 \label{sec:text-code}
 
-This section starts with a look at the text as a learning material that humans produce and consume, continues with a production of a source code from the viewpoint of a learner, and ends with a short subsection on how the code is processed by a machine.
+This section starts with a look at the text as a learning material that humans produce and consume continues with the production of a source code from the viewpoint of a learner, and ends with a short subsection on how the code is processed by a machine.
 
 \subsection{Producing Learning Material}
 
@@ -32,22 +32,22 @@ According to a survey conducted by \textcite{StackOverflow_2023}, more complex \
 The most popular \gls{ide} used by more than 70\% of professionals and learners is Visual Studio Code \parencite{StackOverflow_2023}.
 
 Research focusing on the ease of use of sophisticated \glspl{ide}, especially among learners, is inconclusive.
-While a survey from \textcite{owoseni_2016} suggests learners find sophisticated \glspl{ide} difficult to use when learning programming, \textcite{vihavainen_how_2014} use session traces to back the opinion there is no evidence learning to use an \gls{ide} is hard.
+While a survey from \textcite{owoseni_2016} suggests learners find sophisticated \glspl{ide} difficult to use when learning programming, \textcite{vihavainen_how_2014} use session traces to back the opinion that there is no evidence learning to use an \gls{ide} is hard.
 
 As far as a web-based \gls{ide} goes, \textcite{valez_student_2020} explored the idea of using a pre-configured custom \gls{ide} that is a low-threshold alternative to common \glspl{ide}.
 While most participants found the web \gls{ide} useful and found the fact that it was web-based and did not require installation useful, it was also found to often lack the functionality learners were looking for and was used mostly by more junior students \parencite{valez_student_2020}.
 
 \subsection{Parsing Code}
 
-This subsection starts with a mention a subset of basic graph terminology relevant for this thesis and some basic algorithms and graph properties.
-After a brief introduction to graph theory, it is possible to talk about tokenizers and parsers from a practical point of view of a software developer.
+This subsection starts with a mention of a subset of basic graph terminology relevant to this thesis and some basic algorithms and graph properties.
+After a brief introduction to graph theory, it is possible to talk about tokenizers and parsers from the practical point of view of a software developer.
 
 \subsubsection{Graph Theory}
 
 A graph is a data structure that consists of a non-empty finite set of \emph{vertices} and a possibly empty finite set of \emph{edges} \parencite{wilson_graph_2009}.
 Each edge connects exactly two vertices, and if the edges have a direction, we call the graph a \emph{directed} graph \parencite{wilson_graph_2009}.
 
-There are many different ways how to traverse a graph.
+There are many different ways to traverse a graph.
 One such way is to use the \gls{bfs} algorithm.
 \gls{bfs} follows the following logic \parencite{wilson_graph_2009}:
 
@@ -72,7 +72,7 @@ Additionally, it is cyclic, as vertex $DF$ creates a cycle that could be removed
 A graph is considered a \emph{tree} if it has exactly one path between any of the vertices, does not contain cycles, and is not disconnected \parencite{wilson_graph_2009}.
 A tree is called \emph{rooted} if exactly one vertex is chosen as the root and all edges are "directed away from the root" \parencite{Baek_trees_2015}.
 Figure~\ref{fig:text-tree-basics} shows an example of such a tree.
-Vertices that have at least one outgoing edge are called \emph{internal vertices}, while vertices that have no outgoing edge are called.
+Vertices that have at least one outgoing edge are called \emph{internal vertices}, while vertices that have no outgoing edge are called \emph{leaf vertices}.
 \emph{Children} of an internal vertex are all vertices that have an incoming edge from that internal vertex \parencite{Baek_trees_2015}.
 
 \begin{figure}[H]
@@ -84,20 +84,18 @@ Vertices that have at least one outgoing edge are called \emph{internal vertices
 
 \subsubsection{Tokenizers and Parsers}
 
-\todo[inline]{Is referencing fine here? How to cite sources if I've only loosely used \parencites{tomassetti_parsing_2017}{Kjolstad_parsing_2023} as most of the literature is too theoretical and "unwieldy"?}
-
 Parsing is a process of turning a text in a given \emph{language}, like code, into some meaningful object, for example, a program that can be executed \parencites{tomassetti_parsing_2017}{Kjolstad_parsing_2023}.
 A naive approach to parsing is to go through the program character by character using a loop.
 However, the logic of our language, called \emph{grammar}, would have to be captured within the procedural code, which would make it rather verbose, inflexible, and relatively hard to understand.
 Instead, the grammar of the language is commonly defined separately and serves as an input for a \emph{parser generator}, which creates the parser.
 The parser can operate on individual characters, in which case it is said to be \emph{scannerless} as it lacks a \emph{scanner} that would pre-process the text.
-The scanner groups individual characters into more meaningful tokens and, for the purposes of this thesis, is also referred to as \emph{lexer} or \emph{tokenizer}.
+The scanner groups individual characters into more meaningful tokens and, for the purposes of this thesis, is also referred to as a \emph{lexer} or \emph{tokenizer}.
 
-Therefore, we can say processing of the text on the input goes through three distinct consecutive phases:
+Therefore, we can say that the processing of the text on the input goes through three distinct consecutive phases:
 
 \begin{enumerate}
     \item \textbf{Lexing}: A string of characters on the input is broken down using a lexer into a string of tokens.
-    \item \textbf{Parsing}: A string of tokens on the input is turned into a \gls{cst} using a parser - if the input is valid.
+    \item \textbf{Parsing}: A string of tokens on the input is turned into a \gls{cst} using a parser --- if the input is valid.
     \item \textbf{Processing}: A valid \gls{cst}, which is mostly just a set of tokens represented using a tree, is simplified into an \gls{ast}, which is a convenient logical representation of the described object.
 \end{enumerate}
 
@@ -116,4 +114,4 @@ Conciseness allowed by using features like left and right recursion may require 
 Simpler and faster parsers called \emph{LL} parse from left to right and produce a tree from the largest logical blocks to the smallest logical blocks called \emph{terminals}.
 More flexible but potentially slower are parsers using the \emph{Earley} algorithm.
 Earley algorithm uses top-down dynamic programming and enables support of both left and right recursion, and allows for ambiguous grammar.
-While the average performance of an Ealery parse is $\theta(n^3)$, where $n$ is the number of tokens on the input, there are multiple ways to achieve better performance (and complexity class): by using left recursion, by using unambiguous grammar, or by using an implementation that features optimizations from \textcite{leo_general_1991} if using right recursion in an LL grammar.
+While the average performance of an Ealery parse is $\theta(n^3)$, where $n$ is the number of tokens on the input, there are multiple ways to achieve better performance (and complexity class): by using left recursion, unambiguous grammar, or an implementation that features optimizations from \textcite{leo_general_1991} if using right recursion in an LL grammar.
