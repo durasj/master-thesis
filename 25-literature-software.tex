@@ -3,7 +3,7 @@
 
 Taking into account the vehicle of this research is an open web application that takes inspiration from an existing tool and reuses various open content, this section starts with the exploration of legal basis.
 Then, it looks at some basic necessities of open software to improve the chances the software succeeds.
-Afterwards, it covers the most relevant software engineering topics regarding the development and deployment, reliability and security, and testing, that are used later in the thesis.
+Afterwards, it covers the most relevant software engineering topics regarding the development and deployment, reliability and security, and testing, that are used later in this thesis.
 
 \subsection{Legal Background}
 
@@ -20,13 +20,13 @@ Because of the ambiguity of the English language in this case, an alternative wa
 \subsubsection{Licensing}
 
 There are significant legal implications of licensing both when producing and consuming third-party software and other assets \parencites[Chapter~9]{Fogel_2022}[pp. 11-12]{Duras_2020}.
-The range of licenses one can apply or come across is rather wide, but the main aspect relevant to this thesis is the "openness" --- to what extent one can apply the mentioned freedoms.
+The range of licenses one can apply or come across is rather wide, but the main aspect relevant to this thesis is the "openness"---to what extent one can apply the mentioned freedoms.
 As the author summarised before in \textcite{Duras_2020}, we can group these into three categories:
 
 \begin{itemize}
     \item \textbf{Proprietary}: The least open. Under the complete control of the author, usually confidential and paid.
-    \item \textbf{Copyleft Open Source}: Technically open. Users have all the mentioned freedoms. However, they are severely restricted in how they can modify and distribute software. The modified work must be licensed under a compatible Copyleft license --- i.e. not proprietary or permissive --- and changes often have to be tracked. While it is considered a desired feature, it also greatly influences reuse.
-    \item \textbf{Permissive Open Source}: The most open. Users have all the mentioned freedoms. Licenses are usually very short and do not place any restrictions --- the users are free to do whatever they want as long as the author is attributed, not held liable for damage, and it is clear what was the original license.
+    \item \textbf{Copyleft Open Source}: Technically open. Users have all the mentioned freedoms. However, they are severely restricted in how they can modify and distribute software. The modified work must be licensed under a compatible Copyleft license---i.e. not proprietary or permissive---and changes often have to be tracked. While it is considered a desired feature, it also greatly influences reuse.
+    \item \textbf{Permissive Open Source}: The most open. Users have all the mentioned freedoms. Licenses are usually very short and do not place any restrictions---the users are free to do whatever they want as long as the author is attributed, not held liable for damage, and it is clear what was the original license.
 \end{itemize}
 
 \begin{figure}[H]
@@ -37,7 +37,7 @@ As the author summarised before in \textcite{Duras_2020}, we can group these int
 \end{figure}
 
 While the above-mentioned licenses are commonly used to license software, one notable group of licenses commonly applied to other creative works are the \gls{cc} licenses \parencite{Hagedorn_2011}.
-These can differ considerably in restrictions they impose on users, from just requiring attribution --- \gls{cc} BY\footnote{Available at \url{https://creativecommons.org/licenses/by/4.0/}.} --- through disallowing commercial use and mandating the use of the same license --- \gls{cc} BY NC SA\footnote{Available at \url{https://creativecommons.org/licenses/by-nc-sa/4.0/}.} --- to even prohibiting any adaptation --- \gls{cc} BY NC ND\footnote{Available at \url{https://creativecommons.org/licenses/by-nc-nd/4.0/}.} \parencite{Hagedorn_2011}.
+These can differ considerably in restrictions they impose on users, from just requiring attribution---\gls{cc} BY\footnote{Available at \url{https://creativecommons.org/licenses/by/4.0/}.}---through disallowing commercial use and mandating the use of the same license---\gls{cc} BY NC SA\footnote{Available at \url{https://creativecommons.org/licenses/by-nc-sa/4.0/}.}---to even prohibiting any adaptation---\gls{cc} BY NC ND\footnote{Available at \url{https://creativecommons.org/licenses/by-nc-nd/4.0/}.} \parencite{Hagedorn_2011}.
 As such, they move almost across the whole spectrum of "openness" outlined in Figure~\ref{fig:license-comparison}.
 The non-commercial variant is especially controversial as there are differing opinions on what constitutes commercial use \parencite{Hagedorn_2011}.
 While for-profit companies using a specific creative work to generate profit are a clear case of commercial use, a work by non-commercial organizations or individuals that is not directly compensated may or may not be classified as commercial use \parencite{Hagedorn_2011}.
@@ -48,7 +48,7 @@ In relation to software, there are some aspects that may not constitute a copyri
 A common requirement for work to be copyrightable is for it to be original \parencite{Fisher_2016}.
 While the level of originality (creativity) required in the \gls{us} or Japan is considered to be low, within the \gls{eu}, it is higher \parencite{Fisher_2016}.
 Under the \gls{eu} law, the work "must reflect the author's own intellectual creation" and the author must be able to make their own choices \parencite[p. 443]{Fisher_2016}.
-The latter alludes to external limitations --- like when the author has to make certain choices to ensure interoperability \parencite{Fisher_2016}.
+The latter alludes to external limitations---like when the author has to make certain choices to ensure interoperability \parencite{Fisher_2016}.
 
 Specifically for programming languages, \textcite{Rose_2012} mention the ruling of the \gls{eu}'s highest court that confirmed the "functionality [...] nor the programming language and the format of data files [...] constitute a form of expression [... and so ...] are not protected by copyright [...]" \parencite{cjeu_2012}.
 Moreover, it is allowed "to observe, study or test the functioning of that program so as to determine the ideas and principles" \parencite{cjeu_2012}.
@@ -76,7 +76,7 @@ In relation to software, as is the case in the \gls{eu}, "the idea behind softwa
 
 When it comes to involving others, \textcite[Chapter~8]{Fogel_2022} suggests keeping in mind most \gls{oss} participants are intrinsically motivated and "credit is the primary currency", should be prevented from "territoriality", and repetitive tasks should be automated as much as possible.
 Notably, this includes automated testing, which is important for any modern software project \parencite[Chapter~9]{Sommerville_2019}, but \textcite[Chapter~8]{Fogel_2022} argues it is especially important for \gls{oss}.
-Regression tests allow others who are completely unfamiliar --- as is often the case with \gls{oss} --- to contribute to the code without both authors and contributors fearing breakage.
+Regression tests allow others who are completely unfamiliar---as is often the case with \gls{oss}---to contribute to the code without both authors and contributors fearing breakage.
 
 \subsection{Development and Deployment}
 
@@ -97,7 +97,7 @@ One of the more recent trends is to utilise serverless computing, where the appl
 
 In relation to the delivery of the software, \textcites[Chapter~10]{Sommerville_2019}[Chapter~7]{Fogel_2022} concur with the idea the goal is to ship reliable software and to ship often.
 DevOps, in particular, is highlighted by \textcite[Chapter~10]{Sommerville_2019} as the preferred modern approach to integration and delivery.
-The basic idea is to utilise automation and data to, among else, integrate and deploy the code --- \gls{ci} and \gls{cd}.
+The basic idea is to utilise automation and data to, among else, integrate and deploy the code---\gls{ci} and \gls{cd}.
 
 \subsection{Reliability and Security}
 
@@ -106,19 +106,19 @@ Simple examples of how to achieve reliability offered by \textcite[Chapter~8]{So
 
 When it comes to security, the main motivation is to prevent reputation, privacy, or monetary damage done to the users and authors \textcite[Chapter~7]{Sommerville_2019}.
 In the case of serverless computing, one significant potential problem is monetary damage from Denial of Service attacks \parencite{Kelly2021}.
-Considering the virtually endless scalability and the pay-as-you-go model, instead of endangering availability, the attacks can create an artificial load that can mean significant costs --- especially for small projects \parencite{Kelly2021}.
+Considering the virtually endless scalability and the pay-as-you-go model, instead of endangering availability, the attacks can create an artificial load that can mean significant costs---especially for small projects \parencite{Kelly2021}.
 
 \subsection{Testing}
 \label{Literature-Software-Testing}
 
 \textcite[Chapter~9]{Sommerville_2019} maintains code reviews and (automated) software testing are "essential".
-While there are many types of testing, the most relevant ones for this thesis are functional --- the system does what it should --- and user --- the system brings value --- tests.
+While there are many types of testing, the most relevant ones for this thesis are functional---the system does what it should---and user---the system brings value---tests.
 The following subsection focuses on functional testing alone as one way of user testing in the form of a comparative study was already covered in detail.
 
 Functional testing involves testing on different levels of abstraction.
 The lowest level is testing of the smallest encapsulated parts of the software (units) like functions \parencite[Chapter~9]{Sommerville_2019}.
 A level higher in abstraction are feature tests that cover testing the introduced or modified feature \parencite[Chapter~9]{Sommerville_2019}.
-The highest level of tests relevant to this thesis are system tests that involve testing the whole product --- the combination of its features \parencite[Chapter~9]{Sommerville_2019}.
+The highest level of tests relevant to this thesis are system tests that involve testing the whole product---the combination of its features \parencite[Chapter~9]{Sommerville_2019}.
 While lower-level testing is almost always done by developers and is easier to automate, highest level testing is usually done by testers and harder to automate \parencite[Chapter~9]{Sommerville_2019}.
 Additionally, experience from the field suggest lower-level tests are more reliable, easier, and cheaper to maintain than higher-level tests \parencites{cohn_succeeding_2010}{Wacker_2015}{Sommerville_2019}.
 As such, a common recommendation is to have a higher proportion of unit tests and a lower number of feature and system tests, as illustrated in Figure~\ref{fig:testing-pyramid}.

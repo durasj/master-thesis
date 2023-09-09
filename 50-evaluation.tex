@@ -14,7 +14,7 @@ Both sections outline the implementation, scope, and achieved results.
 \label{sec:evaluation-unit-tests}
 
 To cover all important reusable parts (units) of the software, all files within the $/src/lib$ directory\footnote{Available at \href{https://github.com/durasj/chipsandcode/tree/4576a0b/src/lib}{github.com/durasj/chipsandcode/tree/4576a0b/src/lib}.} had a corresponding $.test.ext$ file.
-The only exceptions were: Svelte components that would be better suited for Cypress Component Testing\footnote{Available at \url{https://docs.cypress.io/guides/component-testing/overview}.} --- which did not yet have stable support for Svelte, type definition files, and files that were tested indirectly.
+The only exceptions were: Svelte components that would be better suited for Cypress Component Testing\footnote{Available at \url{https://docs.cypress.io/guides/component-testing/overview}.}---which did not yet have stable support for Svelte, type definition files, and files that were tested indirectly.
 
 Figure~\ref{fig:test-unit-example} shows an example unit test that belongs to the test suite for output processing.
 It checks the output object can be created from text input, allows observing the loaded values, and can be serialized back.
@@ -89,7 +89,7 @@ Following the chosen methodology, the first step to writing \gls{ui} and accessi
 \end{enumerate}
 
 These use cases were grouped by the screen they were related to and implemented as Cypress tests.
-As part of the test, all pages are checked for accessibility violations\footnote{Using aXe, see \url{https://github.com/dequelabs/axe-core/blob/0316e72/doc/rule-descriptions.md} for the list of performed checks.}.
+As part of the test, all pages are checked for accessibility violations.\footnote{Using aXe, see \url{https://github.com/dequelabs/axe-core/blob/0316e72/doc/rule-descriptions.md} for the list of performed checks.}
 Additionally, the same pages were also checked for visual regressions using a plugin\footnote{A Cypress plugin, available at: \url{https://github.com/FRSOURCE/cypress-plugin-visual-regression-diff}.} that calculated the difference between the captured and persisted screenshots.
 Importantly, all tests are completely isolated, and all \gls{api} calls were stubbed to ensure there are no side effects.
 Cypress automatically clears any state produced within the browser, but any state other side effects would create would not be cleared.
@@ -134,7 +134,7 @@ These consisted of the following known use cases:
 \begin{enumerate}
     \item \textbf{Chip Download}: This functionality was not covered as it is not trivial to test downloads in Cypress, especially if we consider it is a zip file that would have to be opened and inspected.
     \item \textbf{Dark Mode}: While this functionality is covered using visual regression tests to some extent, since it can be activated anywhere, it would require testing the same functionality in both modes everywhere. As this functionality is considered a "nice to have" opt-in feature, it was not considered worth it.
-    \item \textbf{Responsivity}: Similarly to the previous point, the application can be used in all kinds of environments with a basically unlimited range of screen sizes. While testing the same functionality on a large range of screen sizes could be valuable, it was not possible with the limited time allocated to the thesis.
+    \item \textbf{Responsivity}: Similarly to the previous point, the application can be used in all kinds of environments with a basically unlimited range of screen sizes. While testing the same functionality on a large range of screen sizes could be valuable, it was not possible with the limited time allocated to this thesis.
 \end{enumerate}
 
 \section{Accessibility Evaluation}
@@ -150,7 +150,7 @@ There were three exceptions where accessibility checks had to be disabled:
     \item \textbf{Colour Contrast} rule, which was triggered on Monaco Editor, but the editor provides an opt-in high contrast mode.
 \end{itemize}
 
-Secondly, an automated evaluation using browser extensions --- Lighthouse\footnote{Available at \url{https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk}.} and aXe DevTools\footnote{Available at \url{https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd}.} built into the Chrome DevTools --- was performed.
+Secondly, an automated evaluation using browser extensions---Lighthouse\footnote{Available at \url{https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk}.} and aXe DevTools\footnote{Available at \url{https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd}.} built into the Chrome DevTools---was performed.
 Both tools reported no problems with accessibility, as can be seen in Figure~\ref{fig:lighthouse-report} and Figure~\ref{fig:axe-report}.
 
 \begin{figure}[H]
@@ -165,7 +165,7 @@ Both tools reported no problems with accessibility, as can be seen in Figure~\re
     \label{fig:axe-report}
 \end{figure}
 
-Lastly, a manual \gls{wcag} test, following the \gls{wcagem} report tool, was performed\footnote{Report can be found at \url{https://github.com/durasj/master-thesis/blob/main/assets/WCAG_Evaluation_Report.pdf}}.
+Lastly, a manual \gls{wcag} test, following the \gls{wcagem} report tool, was performed.\footnote{Report can be found at \url{https://github.com/durasj/master-thesis/blob/main/assets/WCAG_Evaluation_Report.pdf}}
 The only potential problem identified during the testing involves dynamic updates to the \gls{ui}.
 The author was unable to determine whether the automatically updated pin \gls{ui} is usable when using assistive technology.
 For example, if the user changes some code in the editor and the list of pin updates, is this properly communicated using assistive technology?
@@ -181,7 +181,7 @@ The following section contains results from the comparative study.
 All figures are also available at \href{https://thesis.chipsandcode.com}{thesis.chipsandcode.com} with the advantage of being interactive.
 
 The total number of participants who joined the scheduled comparative study session was $n=26$.
-Out of that, the data of two participants had to be removed --- Participant $F$, who experienced technical difficulties unrelated to the software and Participant $J$, who mentioned they tried the Proposed Software in the past.
+Out of that, the data of two participants had to be removed---Participant $F$, who experienced technical difficulties unrelated to the software and Participant $J$, who mentioned they tried the Proposed Software in the past.
 The resulting sample size that was analysed was $n=24$, with an equal distribution of $n_1=12$ and $n_2=12$ among both groups.
 
 The list of participants and their profiles within Group A can be seen in Table~\ref{table:evaluation-profile-a}, while Group B participant profiles can be seen in Table~\ref{table:evaluation-profile-b}.
@@ -257,7 +257,7 @@ The first kind of collected data on efficiency consisted of time-related data li
 Figure~\ref{fig:plot-linear} shows a linear graph covering the mean of the time of mentioned steps between both groups.
 The same data can be seen as cumulative, which is represented by Figure~\ref{fig:plot-stacked-bar}.
 The total time spent on all parts was $512.42 \pm 190.01 s$ for Group A and $1,496.67 \pm 326.18 s$ for Group B ($\alpha=0.05$, $p<0.001$).
-Raw data collected during the study and that served as input to mentioned figures and results can be reviewed online\footnote{Available at \url{https://docs.google.com/spreadsheets/d/1CGNs1pCKvGJ4QuRDCExNc_3SZ4pgX3UlTXSKJU8hpa8}.}.
+Raw data collected during the study and that served as input to mentioned figures and results can be reviewed online.\footnote{Available at \url{https://docs.google.com/spreadsheets/d/1CGNs1pCKvGJ4QuRDCExNc_3SZ4pgX3UlTXSKJU8hpa8}.}
 
 The second kind of data on efficiency was the number of times the participant got confused, see Figure~\ref{fig:plot-boxplot}.
 For Group A, the mean was $0.58 \pm 0.42$, while for Group B, it was $2.83 \pm 0.85$ ($\alpha=0.05$, $p<0.001$).
@@ -334,3 +334,9 @@ Lastly, Figure~\ref{fig:plot-correlation-age} does not show a correlation betwee
     \caption{Relation between age and dependent variables.}
     \label{fig:plot-correlation-age}
 \end{figure}
+
+\section{Summary}
+
+In this chapter, we have first shown the scope, implementation, and results of the various tests.
+Proposed Software was checked for correctness, compatibility with Existing Software, and accessibility compliance.
+The second part of the evaluation has presented results from the comparative study - notably quantitative data on efficiency, \gls{sus} score, and selected correlations.

@@ -1,19 +1,18 @@
 \chapter{Methodology}
 \label{Methodology}
 
-The main paradigm used for this thesis is Design Science Research (DSR), as currently outlined by \textcite{brocke2020designscience}.
-The author of this thesis used existing theories, frameworks, and models to produce and evaluate a new innovative artifact --- instantiation, as categorised by \textcite{hevner2004designscience}.
+The main paradigm used for this thesis is \gls{dsr}, as currently outlined by \textcite{brocke2020designscience}.
+The author of this thesis used existing theories, frameworks, and models to produce and evaluate a new innovative artefact---instantiation, as categorised by \textcite{hevner2004designscience}.
 
-The created artifact is a web application --- referred to as "Proposed Software" for the rest of this thesis.
-The most popular existing software that Proposed Software improves on is the Nand2Tetris Java desktop application\footnote{Available at \url{https://www.nand2tetris.org/software}.} --- referred to as "Existing Software" for the rest of this thesis.
+The created artefact is a web application---referred to as "Proposed Software" for the rest of this thesis.
+Proposed Software improves on a Java desktop application supplied with a popular learning content called Nand2Tetris\footnote{Hardware Simulator, available at \url{https://www.nand2tetris.org/software}.}---referred to as "Existing Software" for the rest of this thesis.
 
-This thesis aims to: show it is feasible for Proposed Software to effectively implement the same selected functionality on the client-side web; analyse the usability (and specifically efficiency) improvements compared to Existing Software; and explore the link between usability and efficiency.
-As such, it starts with a description of the approach used to design Proposed Software.
+As the first objective is to efficiently implement Proposed Software usable by a wide range of people, this chapter starts with a software design methodology.
 After that, it covers the evaluation of Proposed Software consisting of the following:
 
 \begin{itemize}
-    \item \textbf{Functional Testing} to verify Proposed Software can perform the selected functions Existing Software can (feature parity of selected parts) and that it works as expected (correctness).
-    \item \textbf{Comparative Study} to collect and analyse mainly quantitative and partially qualitative data on the efficiency and usability of Proposed Software and Existing Software while performing the same set of tasks under controlled conditions.
+    \item \textbf{Functional Testing}, to verify Proposed Software can perform the selected functions Existing Software can (compatibility and feature parity of selected parts) and that it works as expected (correctness).
+    \item \textbf{Comparative Study}, to collect and analyse mainly quantitative and partially qualitative data on the efficiency and usability of Proposed Software and Existing Software while performing the same set of tasks under controlled conditions.
 \end{itemize}
 
 \section{Software Design}
@@ -38,20 +37,20 @@ Multiple types of automated tests were utilized to verify the functionality of P
 \textbf{Unit Tests} were used for the verification of granular parts of the software with clear inputs and outputs.
 That includes all proposed parsers that accept a text on the input and provide an \gls{ast} on the output; a factory that accepts an \gls{ast} on the input and produces chips on the output; elementary built-in and simple custom chips that have a clear interface and a definite number of combinations of inputs and outputs; and other similar reusable abstractions.
 The exact unit test framework chosen for this purpose was Vitest\footnote{Available at \url{https://vitest.dev/}.}, as it is well-integrated with the code bundler Vite\footnote{Available at \url{https://vitejs.dev/}.} the chosen SvelteKit framework\footnote{Available at \url{https://kit.svelte.dev/}.} is based on.
-The expected coverage on all files providing the mentioned functionality should exceed 80\%, which corresponds to the median coverage on projects at Google and is set to prevent an exponential increase in effort required to increase coverage further --- see \Cref{Literature-Software-Testing}.
+The expected coverage on all files providing the mentioned functionality should exceed 80\%, which corresponds to the median coverage on projects at Google and is set to prevent an exponential increase in effort required to increase coverage further---see \Cref{Literature-Software-Testing}.
 
 \textbf{End-to-End UI Tests} verified the software from the viewpoint of a user.
 In contrast to the Unit Tests, that meant designing automated tests that covered interaction between multiple components and even multiple screens.
 Examples include navigation through Proposed Software with checks for the existence of essential information, interaction with the \gls{ide}, or error handling.
-The tool of choice for this purpose was Cypress\footnote{Available at \url{https://www.cypress.io/}.}.
+The tool of choice for this purpose was Cypress.\footnote{Available at \url{https://www.cypress.io/}.}
 No automated coverage as a percentage was calculated for this group of automated tests, as many lines of code would be marked as covered (given the nature of these tests) even though they were not actively tested.
 Instead, all major paths through the software (use cases) were identified and captured in an automated test unless the return on the effort to do so would not be considered worth it.
 The reasoning was captured individually for each use case that was not covered.
 
-\textbf{Accessibility Tests} checked automatically for common errors with incorrectly implemented \gls{api}[s] --- aiming for "technical accessibility" as mentioned in \Cref{Kinds-of-Accessibility}.
+\textbf{Accessibility Tests} checked automatically for common errors with incorrectly implemented \gls{api}[s]---aiming for "technical accessibility" as mentioned in \Cref{Kinds-of-Accessibility}.
 The chosen conformance target was "generally accepted and recommended" \gls{wcag} Level AA \parencite{WAI_Evaluation_Methodology_Note} and \gls{wcag} version 2.1 as it is the latest supported version within the \gls{wcagem} Report Tool as of the time of writing.
 Checks were run on multiple screens in multiple states entered during the execution of Cypress tests to test for possible violations continually and in more scenarios than can be realistically achieved using one-off evaluation.
-This was accomplished using the \gls{js} package cypress-axe that integrates aXe --- an accessibility testing engine that powers Google's Lighthouse as mentioned in \Cref{Accessibility-Tools}.
+This was accomplished using the \gls{js} package cypress-axe that integrates aXe---an accessibility testing engine that powers Google's Lighthouse as mentioned in \Cref{Accessibility-Tools}.
 Considering the limited amount of time and resources, the human testing involved was limited to testing done by the author to produce the \gls{wcagem} report.
 
 The actual extent and output from all mentioned types of tests, including additional information, where relevant, was captured in \Cref{Evaluation-Tests}.
@@ -66,7 +65,7 @@ The chosen methodology considers three kinds of variables to achieve conditions 
 
 \begin{itemize}
     \item \textbf{Controlled} variables: for example, presented learning content, participant's profile, and actions performed outside of the measured software.
-    \item \textbf{Independent} variable: the used software --- Existing Software or Proposed Software.
+    \item \textbf{Independent} variable: the used software---Existing Software or Proposed Software.
     \item \textbf{Dependent} variables: mainly the time spent on the tasks and the perceived usability.
 \end{itemize}
 
@@ -79,7 +78,7 @@ Since the only independent variable is the used software and there are two optio
 
 Target users of the software are expected to come from different backgrounds corresponding to three target demographics mentioned in \Cref{Introduction}: \gls{cs} students, practitioners with/without formal education, and people interested, but not directly involved, in Computer Science.
 Participants were recruited from the social circle of the author, and they were subsequently asked if they knew any other potentially interested participants.
-To control for external motivation and help with the recruitment, one-half of participants within both groups were paid to participate at a rate of 10 euros per hour, as suggested by Prolific\footnote{Archived Prolific calculator: \url{https://web.archive.org/web/20221221162903/https://app.prolific.co/calculator.html}}.
+To control for external motivation and help with the recruitment, one-half of participants within both groups were paid to participate at a rate of 10 euros per hour, as suggested by Prolific.\footnote{Archived Prolific calculator: \url{https://web.archive.org/web/20221221162903/https://app.prolific.co/calculator.html}}
 However, Prolific or a similar crowdsourcing method was not used to recruit participants.
 All participants were based in an advanced economy country as defined by the International Monetary Fund\footnote{Available at \url{https://www.imf.org/external/pubs/ft/weo/2022/01/weodata/groups.htm}.}.
 Almost all participants were non-native English speakers.
@@ -105,7 +104,7 @@ As part of the content, there was a video showing how to solve the first example
 The study was conducted by the author using the same online meeting software, Google Meet.
 Each participant took the comparative study individually so that the author could fully focus on only one person, and other people did not influence the results.
 
-All participants used their own devices, with only laptops and desktop computers allowed due to the limitations of Existing Software --- a desktop Java software.
+All participants used their own devices, with only laptops and desktop computers allowed due to the limitations of Existing Software---a desktop Java software.
 The use of the participant's device aims to reflect how target users are likely to practice, work on assignments, or explore the content on their own.
 
 To lower the chances the participant would associate the content presented with the author that conducted the study:
@@ -132,21 +131,21 @@ Since it is impossible to keep the profile of the participant the same if differ
 \begin{itemize}
     \item \textbf{Prior Experience} with the relevant topics on a scale of 0 to 2:
         \begin{itemize}[]
-            \item \textbf{0} --- No prior experience.
-            \item \textbf{1} --- Came into contact with the mentioned topics for a short period of time.
-            \item \textbf{2} --- Has either relevant professional experience or was exposed to the topics for a long period of time.
+            \item \textbf{0}: No prior experience.
+            \item \textbf{1}: Came into contact with the mentioned topics for a short period of time.
+            \item \textbf{2}: Has either relevant professional experience or was exposed to the topics for a long period of time.
         \end{itemize}
     \item \textbf{Education} in the field of Computer Science or Computing on a scale of 0 to 2:
     \begin{itemize}[]
-        \item \textbf{0} --- No relevant education.
-        \item \textbf{1} --- Taken modules included Boolean logic or programming in general, but not logic gates or chip design.
-        \item \textbf{2} --- Learnt about Boolean gates and chip design specifically.
+        \item \textbf{0}: No relevant education.
+        \item \textbf{1}: Taken modules included Boolean logic or programming in general, but not logic gates or chip design.
+        \item \textbf{2}: Learnt about Boolean gates and chip design specifically.
     \end{itemize}
     \item \textbf{Relevancy of Occupation} performed by the participant currently or recently on a scale of 0 to 2:
     \begin{itemize}[]
-        \item \textbf{0} --- No relevant occupation.
-        \item \textbf{1} --- Works as a part-time hardware designer, software developer or similar.
-        \item \textbf{2} --- Works as a full-time hardware designer, software developer or similar.
+        \item \textbf{0}: No relevant occupation.
+        \item \textbf{1}: Works as a part-time hardware designer, software developer or similar.
+        \item \textbf{2}: Works as a full-time hardware designer, software developer or similar.
     \end{itemize}
     \item \textbf{Intrinsically Motivated} to participate, as observed by the author on a scale of 0 to 2:
     \begin{itemize}[]
@@ -168,9 +167,9 @@ Since it is impossible to keep the profile of the participant the same if differ
     \end{itemize}
     \item \textbf{Platform}:
     \begin{itemize}[]
-        \item \textbf{Windows}: One of the commonly used desktop Windows NT versions --- Windows 7, Windows 8, Windows 10, or Windows 11.
+        \item \textbf{Windows}: One of the commonly used desktop Windows NT versions---Windows 7, Windows 8, Windows 10, or Windows 11.
         \item \textbf{Linux}: One of the currently supported versions of any commonly used distribution that uses a floating window manager like X11 or Wayland.
-        \item \textbf{macOS}: One of the currently supported versions, regardless of the CPU architecture --- x86 or arm64.
+        \item \textbf{macOS}: One of the currently supported versions, regardless of the CPU architecture---x86 or arm64.
     \end{itemize}
 \end{itemize}
 
@@ -188,14 +187,14 @@ Group B, on the other hand, considering the limitations of Existing Software, ha
 \begin{figure}[ht]
     \centering
     \includegraphics[height=8cm, keepaspectratio]{Group_A_Software}
-    \caption{Screenshot of Proposed Software within text --- Group A.}
+    \caption{Screenshot of Proposed Software within text---Group A.}
     \label{fig:group-a-software}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[height=8cm, keepaspectratio]{Group_B_Software}
-    \caption{Screenshot of Existing Software's input within text --- Group B.}
+    \caption{Screenshot of Existing Software's input within text---Group B.}
     \label{fig:group-b-software}
 \end{figure}
 
@@ -205,13 +204,13 @@ Group B, on the other hand, considering the limitations of Existing Software, ha
 The following metrics were measured:
 
 \begin{itemize}
-    \item \textbf{Success} --- Did the participant complete all assigned tasks --- 1/0.
-    \item \textbf{Preparation Time} --- Time required to start working with the hardware simulator in seconds. This includes the download and installation time in the case of Existing Software.
-    \item \textbf{Time for 1st Task} --- Time required to finish the implementation of a three-way And Boolean gate in seconds.
-    \item \textbf{Time for 2nd Task} --- Time required to finish the implementation of a Nand Boolean gate in seconds.
-    \item \textbf{Time for 3rd Task} --- Time required to finish the implementation of a Nor Boolean gate in seconds.
-    \item \textbf{Time for 4th Task} --- Time required to finish the implementation of a three-way Or Boolean gate in seconds.
-    \item \textbf{Confusions} --- Number of times:
+    \item \textbf{Success}---Did the participant complete all assigned tasks---1/0.
+    \item \textbf{Preparation Time}---Time required to start working with the hardware simulator in seconds. This includes the download and installation time in the case of Existing Software.
+    \item \textbf{Time for 1st Task}---Time required to finish the implementation of a three-way And Boolean gate in seconds.
+    \item \textbf{Time for 2nd Task}---Time required to finish the implementation of a Nand Boolean gate in seconds.
+    \item \textbf{Time for 3rd Task}---Time required to finish the implementation of a Nor Boolean gate in seconds.
+    \item \textbf{Time for 4th Task}---Time required to finish the implementation of a three-way Or Boolean gate in seconds.
+    \item \textbf{Confusions}---Number of times:
     \begin{enumerate}[(a)]
         \item The participant asked for help because they were confused.
         \item The author offered help to the participant because the participant had been stuck on the same problem for more than about one minute without any progress.
@@ -264,14 +263,14 @@ The collected qualitative edata included:
 \subsection{Data Analysis}
 \label{sec:methodology-data-analysis}
 
-To decrease the likelihood of manual errors when evaluating \gls{sus} scores, the author obtained the SUS Guide \& Calculator Package\footnote{Available at: \url{https://measuringu.com/product/suspack/}.}.
+To decrease the likelihood of manual errors when evaluating \gls{sus} scores, the author obtained the SUS Guide \& Calculator Package.\footnote{Available at: \url{https://measuringu.com/product/suspack/}.}
 Based on \Cref{sec:sus-evaluation}, it was suggested at least 12 participants per group would need to participate in the study if the assumption is the effect size is relatively large.
 
-The measured efficiency is represented by calculating the arithmetic mean of the measured times --- individually for each task and added together, and the mean number of confusions.
+The measured efficiency is represented by calculating the arithmetic mean of the measured times---individually for each task and added together, and the mean number of confusions.
 The subjective usability is analysed as a mean of \gls{sus} scores for each group.
 Analysed data are assumed to follow standard distribution and all relevant calculations are done with two-tailed tests.
 
-To determine the stastitical power of the gathered data, the results were evaluated using the two-sample $t$-test and included:
+To determine the stastitical power of the gathered data, the results were evaluated using the two-sample $t$-test, where relevant, and included:
 
 \begin{itemize}
     \item $p$-value, with expected $p \leq 0.1 $, ideally $p \leq 0.05 $,
@@ -288,7 +287,7 @@ As the assigned software is assumed to have a strong influence on the dependent 
     \item $0.6 < |r|$ considered as a strong correlation.
 \end{itemize}
 
-Visually, results are presented using a series of charts and plots\footnote{Created using Plotly.js available at \url{https://plotly.com/javascript/}.}:
+Visually, results are presented using a series of charts and plots:\footnote{Created using Plotly.js available at \url{https://plotly.com/javascript/}.}
 
 \begin{itemize}
     \item A linear chart with the time each group needed to perform subsequent tasks.
@@ -308,3 +307,11 @@ The comparative study had several notable design limitations which could not be 
     \item \textbf{Additional Step}: While Existing Software bundle does include a starting point for projects, it does not include the simple exercises chosen for this study. That means Group B participants had to take one extra step to create starting files.
     \item \textbf{Moderator Bias}: The study was moderated by the author rather than a blind data collector.
 \end{itemize}
+
+\section{Summary}
+
+In this chapter, we outlined the two-phase approach chosen for this thesis based on the two distinctive primary research steps of \gls{dsr}.
+The first phase involves designing and implementing Proposed Software with the aim to allow the use by as many people as possible and to optimise for usability (and, transitively, performance).
+The second phase represents evaluation.
+First, that means functional testing using mainly automated tests to verify and validate Proposed Software.
+Second, that means a between-subjects controlled comparative study involving Existing Software and Proposed Software.
