@@ -19,18 +19,17 @@ export function AssignmentBias() {
           Assignment Bias
         </SectionHeading>
         <p className="mt-8 font-display text-4xl font-bold tracking-tight text-zinc-900">
-          Considering group differences, plots below explore correlations to
+          Considering group differences, correlations were explored to
           hint at possible assignment bias.
         </p>
         <p className="mt-4 text-lg tracking-tight text-zinc-700">
           While there was an effort to distribute participants equally between
-          the two groups, some differences still remained. Correlation was
-          explored between profile attributes that differed the most using
-          linear regression (the least sum of squares). The relatively strong
+          the two groups, some differences still remained. Correlations between profile attributes that differed the most can
+          be observed visually on the following plots. The relatively strong
           correlation (<pre className="inline-block">r(11)</pre> ranging from{' '}
           <pre className="inline-block">-.27</pre> to <pre className="inline-block">-.69</pre>,{' '}
           <pre className="inline-block">p {'<'} 0.1</pre>) in the case of education and occupation suggests
-          the shown results could be skewed in favor of Group B - the existing tool.
+          the shown performance data could be skewed in favor of Group B - the existing tool.
         </p>
       </Container>
       <Container size="lg">
