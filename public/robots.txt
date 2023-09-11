@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /main.pdf
+
+User-agent: *
+Allow: /
